@@ -31,3 +31,71 @@ body{
     text-align: center;
     color: #ffffff;
 }
+
+/*-------------------------------------------------------------------------planets*/
+.allplanets{
+    padding: 2rem 0rem 2rem 0rem;
+    margin: auto;    
+}
+
+.planet{
+    height: 8rem;
+    max-width: 15rem;
+    border: #ffffff solid .2rem;
+    border-radius: 10px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-color: black;
+    margin: .2rem;
+
+ 
+}/*-------------------------------------------------------------------------planet images*/
+.earth{
+    background-image: url("../images/planets/earth.jpg");
+    
+}
+
+.jupiter{
+    background-image: url("../images/planets/jupiter.png");
+    
+}
+
+.mars{
+    background-image: url("../images/planets/mars.jpg");
+    
+}
+
+.mercury{
+    background-image: url("../images/planets/mercury.jpg");
+       
+}
+
+.neptune{
+    background-image: url("../images/planets/neptune.jpg");
+    
+}
+
+.saturn{
+    background-image: url("../images/planets/saturn.jpg");
+    
+}
+
+.uranus{
+    background-image: url("../images/planets/uranus.jpg");
+    
+}
+
+.venus{
+    background-image: url("../images/planets/venus.jpg");
+    
+}
+
+.facedown{
+    background-image: url("../images/planets/rocket.png");
+    background-size: contain;
+    background-color: #ebbe47;
+  
+    
+}
