@@ -1,0 +1,33 @@
+@import url(<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap">);
+
+/*-------------------------------------------------------------------------body*/
+body{
+    
+    padding: 0rem;
+    font-family: 'Balsamiq Sans', cursive;
+    background-color: #47ebbe
+}
+
+/*-------------------------------------------------------------------------header*/
+.page-title {
+    font-size: 3.125rem;
+    text-align: center;
+    
+}
+
+.btn-style {
+    background-color: #4774eb;
+    color: #ffffff;
+    border: #ffffff solid .25rem;
+;
+}
+
+.home-button {
+    text-align: center;
+}
+
+.heading-home {
+    padding: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
