@@ -5,6 +5,7 @@ body {
   padding: 0rem;
   font-family: "Balsamiq Sans", cursive;
   background-color: #47ebbe;
+  
 }
 
 /*-------------------------------------------------------------------------header*/
@@ -13,14 +14,10 @@ body {
   text-align: center;
 }
 
-.btn-style {
-  background-color: #4774eb;
-  color: #ffffff;
-  border: #ffffff solid 0.25rem;
-}
-
 .home-button {
   text-align: center;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .heading-home {
@@ -29,10 +26,35 @@ body {
   color: #ffffff;
 }
 
+/*-------------------------------------------------------------------------counter*/
+.counter, .timer{
+  background-color: #4774eb;
+  color: #ffffff;
+  border: #ffffff solid 0.25rem;
+  max-width: 10rem;
+  padding: 2rem;
+  margin: 0.4rem;
+  border-radius: 10px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
 /*-------------------------------------------------------------------------planets*/
 .allplanets {
   padding: 2rem 0rem 2rem 0rem;
-  margin: auto;
+  
+}
+
+.buttons{
+    margin: auto;
+    width: 85%;
+    padding-bottom: 2rem;
+    flex-wrap: nowrap;
+   
+    
 }
 
 .planet {
@@ -125,6 +147,14 @@ background-color: #4774eb;
   .game-title {
     font-size: 1.5rem;
   }
+
+  .counter, .timer{
+   max-width: 5rem;
+   max-height: 3rem;
+  
+ 
+
+}
 }
 
 @media (max-width: 320px) {
