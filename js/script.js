@@ -1,6 +1,6 @@
 //Initialise variables.
 
-let firstCard = null;
+let firstCard = 0;
 let i = 0;
 
 //Create onCardClicked function to replace the facedown(rocket) image with the planet image.
@@ -30,23 +30,25 @@ function onCardClicked(planet) {
   }
 
   //Matched function
+  //Add the matches class to the firstCard and target, within a timeout of 2000ms
+  //Count the number of times a match is made
   function matched() {
     console.log("match");
     setTimeout(() => {
       firstCard.classList.add("matches");
       target.classList.add("matches");
     }, 2000);
-    firstCard.matches = 0;
-  }
-
-  //Action to take on an un-matched pair - replace with facedown class. Allow me to keep playing.
-    function unmatched() {
-      console.log("nomatch");
-      setTimeout(() => {
-        firstCard.classList.add("facedown");
-        target.classList.add("facedown");
-      }, 2000);
+    for (i = 0; i < 1; i++) {
+      console.count("matches");
     }
   }
 
-
+  //Unmatched function
+  function unmatched() {
+    console.log("nomatch");
+    setTimeout(() => {
+      firstCard.classList.add("facedown");
+      target.classList.add("facedown");
+    }, 2000);
+  }
+}
