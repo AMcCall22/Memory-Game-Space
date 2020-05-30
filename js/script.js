@@ -11,8 +11,8 @@ function onCardClicked(planet) {
   target.className = target.className.replace("facedown", "");
   i++;
 
-//Check for a match for each planet element, matching on "data-framework".
-//Point to matched or unmatched function 
+  //Check for a match for each planet element, matching on "data-framework".
+  //Point to matched or unmatched function
   if (i === 1) {
     firstCard = target;
   } else {
@@ -27,5 +27,15 @@ function onCardClicked(planet) {
       unmatched();
     }
     i = 0;
-  }}
+  }
 
+  //Matched function
+  function matched() {
+    console.log("match");
+    setTimeout(() => {
+      clickedCard.classList.add("matches");
+      target.classList.add("matches");
+    }, 2000);
+    clickedCard.matches = 0;
+  }
+}
