@@ -92,10 +92,43 @@ body{
     
 }
 
-.facedown{
-    background-image: url("../images/planets/rocket.png");
-    background-size: contain;
-    background-color: #ebbe47;
+.facedown {
+  background-image: url("../images/planets/rocket.png");
+  background-size: contain;
+  background-color: #ebbe47;
+  height: 8rem;
+  max-width: 15rem;
+  border: #ffffff solid 0.2rem;
+  border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 0.2rem;
+  padding: 2rem 0rem 2rem 0rem;
+}
   
     
+
+
+/*-------------------------------------------------------------------------media queries*/
+@media (max-width: 414px) {
+  .planet {
+    height: 5rem;
+    max-width: 5rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .game-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .planet {
+    height: 4.5rem;
+    max-width: 4.5rem;
+  }
 }
