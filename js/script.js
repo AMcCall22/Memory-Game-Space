@@ -33,9 +33,20 @@ function onCardClicked(planet) {
   function matched() {
     console.log("match");
     setTimeout(() => {
-      clickedCard.classList.add("matches");
+      firstCard.classList.add("matches");
       target.classList.add("matches");
     }, 2000);
-    clickedCard.matches = 0;
+    firstCard.matches = 0;
   }
-}
+
+  //Action to take on an un-matched pair - replace with facedown class. Allow me to keep playing.
+    function unmatched() {
+      console.log("nomatch");
+      setTimeout(() => {
+        firstCard.classList.add("facedown");
+        target.classList.add("facedown");
+      }, 2000);
+    }
+  }
+
+
