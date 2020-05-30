@@ -1,95 +1,89 @@
-@import url(<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap">);
+@import url(<linkhref="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap">);
 
 /*-------------------------------------------------------------------------body*/
-body{
-    
-    padding: 0rem;
-    font-family: 'Balsamiq Sans', cursive;
-    background-color: #47ebbe
+body {
+  padding: 0rem;
+  font-family: "Balsamiq Sans", cursive;
+  background-color: #47ebbe;
 }
 
 /*-------------------------------------------------------------------------header*/
 .page-title {
-    font-size: 3.125rem;
-    text-align: center;
-    
+  font-size: 3.125rem;
+  text-align: center;
 }
 
 .btn-style {
-    background-color: #4774eb;
-    color: #ffffff;
-    border: #ffffff solid .25rem;
-;
+  background-color: #4774eb;
+  color: #ffffff;
+  border: #ffffff solid 0.25rem;
 }
 
 .home-button {
-    text-align: center;
+  text-align: center;
 }
 
 .heading-home {
-    padding: 1rem;
-    text-align: center;
-    color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff;
 }
 
 /*-------------------------------------------------------------------------planets*/
-.allplanets{
-    padding: 2rem 0rem 2rem 0rem;
-    margin: auto;    
+.allplanets {
+  padding: 2rem 0rem 2rem 0rem;
+  margin: auto;
 }
 
-.planet{
-    height: 8rem;
-    max-width: 15rem;
-    border: #ffffff solid .2rem;
-    border-radius: 10px;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    background-color: black;
-    margin: .2rem;
-
- 
-}/*-------------------------------------------------------------------------planet images*/
-.earth{
-    background-image: url("../images/planets/earth.jpg");
-    
+.planet {
+  height: 8rem;
+  max-width: 15rem;
+  border: #ffffff solid 0.2rem;
+  border-radius: 10px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: black;
+  margin: 0.2rem;
+transition-property: background-color;
 }
 
-.jupiter{
-    background-image: url("../images/planets/jupiter.png");
-    
+
+
+
+
+/*-------------------------------------------------------------------------planets*/
+.earth {
+  background-image: url("../images/planets/earth.jpg");
 }
 
-.mars{
-    background-image: url("../images/planets/mars.jpg");
-    
+.jupiter {
+  background-image: url("../images/planets/jupiter.png");
 }
 
-.mercury{
-    background-image: url("../images/planets/mercury.jpg");
-       
+.mars {
+  background-image: url("../images/planets/mars.jpg");
 }
 
-.neptune{
-    background-image: url("../images/planets/neptune.jpg");
-    
+.mercury {
+  background-image: url("../images/planets/mercury.jpg");
 }
 
-.saturn{
-    background-image: url("../images/planets/saturn.jpg");
-    
+.neptune {
+  background-image: url("../images/planets/neptune.jpg");
 }
 
-.uranus{
-    background-image: url("../images/planets/uranus.jpg");
-    
+.saturn {
+  background-image: url("../images/planets/saturn.jpg");
 }
 
-.venus{
-    background-image: url("../images/planets/venus.jpg");
-    
+.uranus {
+  background-image: url("../images/planets/uranus.jpg");
+}
+
+.venus {
+  background-image: url("../images/planets/venus.jpg");
 }
 
 .facedown {
@@ -106,9 +100,6 @@ body{
   margin: 0.2rem;
   padding: 2rem 0rem 2rem 0rem;
 }
-  
-    
-
 
 /*-------------------------------------------------------------------------media queries*/
 @media (max-width: 414px) {
