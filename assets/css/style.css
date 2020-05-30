@@ -101,6 +101,16 @@ transition-property: background-color;
   padding: 2rem 0rem 2rem 0rem;
 }
 
+
+
+
+.matches {
+background-image: none;
+background-color: #4774eb;
+}
+
+
+
 /*-------------------------------------------------------------------------media queries*/
 @media (max-width: 414px) {
   .planet {
