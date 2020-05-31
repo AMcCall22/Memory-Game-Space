@@ -73,7 +73,10 @@ transition-property: background-color;
 
 
 
-
+.disabled{
+	pointer-events: none;
+    border: red solid;
+}
 
 /*-------------------------------------------------------------------------planets*/
 .earth {

@@ -16,6 +16,7 @@ function onCardClicked(planet) {
   if (i === 1) {
     firstCard = target;
   } else {
+    i = 0;
     if (
       firstCard.getAttribute("data-framework") ===
       target.getAttribute("data-framework")
@@ -26,29 +27,53 @@ function onCardClicked(planet) {
       console.log("has not been matched");
       unmatched();
     }
-    i = 0;
   }
 
   //Matched function
   //Add the matches class to the firstCard and target, within a timeout of 2000ms
   //Count the number of times a match is made
   function matched() {
-    console.log("match");
+    console.log("match function");
+    disable();
     setTimeout(() => {
       firstCard.classList.add("matches");
       target.classList.add("matches");
+      enable();
     }, 2000);
-    for (i = 0; i < 1; i++) {
-      console.count("matches");
+  }
+
+  //disable
+  function disable() {
+    console.log("disable function");
+    console.log("--->  i is" + i);
+    const allPlanets = document.querySelectorAll(".planet");
+    for (let i = 0; i < allPlanets.length; i++) {
+      console.log("planet: ", allPlanets[i]);
+      allPlanets[i].classList.add("disabled");
     }
+    console.log("--->  i is" + i);
+  }
+
+  //enable
+  function enable() {
+    console.log("enable function");
+    console.log("--->  i is" + i);
+    const allPlanets = document.querySelectorAll(".planet");
+    for (let i = 0; i < allPlanets.length; i++) {
+      console.log("planet: ", allPlanets[i]);
+      allPlanets[i].classList.remove("disabled");
+    }
+    console.log("--->  i is" + i);
   }
 
   //Unmatched function
   function unmatched() {
-    console.log("nomatch");
+    console.log("nomatch function");
+    disable();
     setTimeout(() => {
       firstCard.classList.add("facedown");
       target.classList.add("facedown");
+      enable();
     }, 2000);
   }
 }
