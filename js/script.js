@@ -46,25 +46,21 @@ function onCardClicked(planet) {
   //disable
   function disable() {
     console.log("disable function");
-    console.log("--->  i is" + i);
     const allPlanets = document.querySelectorAll(".planet");
     for (let i = 0; i < allPlanets.length; i++) {
-      console.log("planet: ", allPlanets[i]);
-      allPlanets[i].classList.add("disabled");
+            allPlanets[i].classList.add("disabled");
     }
-    console.log("--->  i is" + i);
   }
 
   //enable
   function enable() {
     console.log("enable function");
-    console.log("--->  i is" + i);
     const allPlanets = document.querySelectorAll(".planet");
     for (let i = 0; i < allPlanets.length; i++) {
-      console.log("planet: ", allPlanets[i]);
-      allPlanets[i].classList.remove("disabled");
+      if (allPlanets[i].className.search("matches") === -1) {
+        allPlanets[i].classList.remove("disabled");
+      }
     }
-    console.log("--->  i is" + i);
   }
 
   //Unmatched function
