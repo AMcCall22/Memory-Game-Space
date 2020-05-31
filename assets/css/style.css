@@ -27,7 +27,7 @@ body {
 }
 
 /*-------------------------------------------------------------------------counter*/
-.counter, .timer{
+.counter-timer{
   background-color: #4774eb;
   color: #ffffff;
   border: #ffffff solid 0.25rem;
@@ -75,8 +75,7 @@ transition-property: background-color;
 
 .disabled{
 	pointer-events: none;
-    border: red solid;
-}
+  }
 
 /*-------------------------------------------------------------------------planets*/
 .earth {

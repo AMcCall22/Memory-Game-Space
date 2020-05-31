@@ -2,6 +2,7 @@
 
 let firstCard = 0;
 let i = 0;
+let j = 0;
 
 //Create onCardClicked function to replace the facedown(rocket) image with the planet image.
 //onclick ="onCardClicked(event)" added to each planet div in index.html.
@@ -40,15 +41,18 @@ function onCardClicked(planet) {
       firstCard.classList.add("matches");
       target.classList.add("matches");
       enable();
+      j++;
+      console.log('no of pair '+j);
+      document.getElementById("pairCounter").innerHTML = j;
     }, 2000);
-  }
+    }
 
   //disable
   function disable() {
     console.log("disable function");
     const allPlanets = document.querySelectorAll(".planet");
     for (let i = 0; i < allPlanets.length; i++) {
-            allPlanets[i].classList.add("disabled");
+      allPlanets[i].classList.add("disabled");
     }
   }
 
@@ -73,4 +77,8 @@ function onCardClicked(planet) {
       enable();
     }, 2000);
   }
-}
+
+  //Counter
+  
+  }
+
