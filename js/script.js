@@ -15,6 +15,7 @@ function onCardClicked(planet) {
   //Point to matched or unmatched function
   if (i === 1) {
     firstCard = target;
+    firstCard.classList.add("disabled");
   } else {
     i = 0;
     if (
