@@ -5,7 +5,6 @@ body {
   padding: 0rem;
   font-family: "Balsamiq Sans", cursive;
   background-color: #47ebbe;
-  
 }
 
 /*-------------------------------------------------------------------------header*/
@@ -14,7 +13,6 @@ body {
   text-align: center;
 }
 
-
 .heading-home {
   padding: 1rem;
   text-align: center;
@@ -22,7 +20,7 @@ body {
 }
 
 /*-------------------------------------------------------------------------counter*/
-.counter{
+.counter {
   background-color: #4774eb;
   color: #ffffff;
   border: #ffffff solid 0.25rem;
@@ -30,48 +28,42 @@ body {
   padding: 2rem;
   margin: 0.4rem;
   border-radius: 10px;
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  
-
 }
 
-.restart{
-background-color: #4774eb;
+.restart {
+  background-color: #4774eb;
   color: #ffffff;
   border: #ffffff solid 0.25rem;
   max-width: 10rem;
   padding: 2rem;
   margin: 0.4rem;
   border-radius: 10px;
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#restartButton{
-    color: #ffffff;
-    background-color: none;
-    font-size: 1.5rem;
+#restartButton {
+  color: #ffffff;
+  background-color: none;
+  font-size: 1.5rem;
 }
 
 /*-------------------------------------------------------------------------planets*/
 .allplanets {
   padding: 2rem 0rem 2rem 0rem;
-  
 }
 
-.buttons{
-    margin: auto;
-    width: 85%;
-    padding-bottom: 2rem;
-    flex-wrap: nowrap;
-      text-align: center;
-   justify-content: center;
-   
-   
-    
+.buttons {
+  margin: auto;
+  width: 85%;
+  padding-bottom: 2rem;
+  flex-wrap: nowrap;
+  text-align: center;
+  justify-content: center;
 }
 
 .planet {
@@ -87,12 +79,9 @@ background-color: #4774eb;
   margin: 0.2rem;
 }
 
-
-
-.disabled{
-	pointer-events: none;
-   
-  }
+.disabled {
+  pointer-events: none;
+}
 
 /*-------------------------------------------------------------------------planets*/
 .earth {
@@ -142,16 +131,39 @@ background-color: #4774eb;
   padding: 2rem 0rem 2rem 0rem;
 }
 
-
-
-
 .matches {
-background-image: none;
-background-color: #4774eb;
+  background-image: none;
+  background-color: #4774eb;
 }
 
+/*-------------------------------------------------------------------------modal*/
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+.modal-content {
+  background-color: #ebbe47;
+  color: #ffffff;
+  margin: auto;
+  padding: 20px;
+  border: 0.2rem solid #ffffff;
+  text-align: center;
+  display: inline-block;
+}
 
+.show {
+  display: block;
+}
+
+.close-button {
+  background-color: #4774eb;
+  color: #ffffff;
+  width: 1.5rem;
+  border: none;
+}
 /*-------------------------------------------------------------------------media queries*/
 @media (max-width: 414px) {
   .planet {
@@ -167,13 +179,11 @@ background-color: #4774eb;
     font-size: 1.5rem;
   }
 
-  .counter, .timer{
-   max-width: 5rem;
-   max-height: 3rem;
-  
- 
-
-}
+  .counter,
+  .timer {
+    max-width: 5rem;
+    max-height: 3rem;
+  }
 }
 
 @media (max-width: 320px) {

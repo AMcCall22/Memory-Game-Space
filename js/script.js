@@ -29,6 +29,10 @@ function onCardClicked(planet) {
     ) {
       console.log("has been matched");
       matched();
+
+      if (j === 7) {
+        endModal();
+      }
     } else {
       console.log("has not been matched");
       unmatched();
@@ -49,7 +53,7 @@ function onCardClicked(planet) {
       j++;
       console.log("no of pair " + j);
       document.getElementById("pairCounter").innerHTML = j;
-    }, 1000);
+    }, 50);
   }
 
   //Disable Function
@@ -83,7 +87,7 @@ function onCardClicked(planet) {
       firstCard.classList.add("facedown");
       target.classList.add("facedown");
       enable();
-    }, 2000);
+    }, 50);
   }
 }
 
@@ -102,4 +106,9 @@ function reset() {
   document.getElementById("pairCounter").innerHTML = j;
   firstCard = 0;
   i = 0;
+}
+
+function endModal() {
+  let gameModal = document.getElementById("endGameModal");
+  gameModal.classList.add("show");
 }
