@@ -4,16 +4,20 @@ let firstCard = 0;
 let i = 0;
 let j = 0;
 
-//Create onCardClicked function to replace the facedown(rocket) image with the planet image.
-//onclick ="onCardClicked(event)" added to each planet div in index.html.
-//Reassign target to the card just clicked then increment i.
+//OnCardClicked Function
+//Create onCardClicked function to replace the facedown(rocket) image with the planet image
+//onclick ="onCardClicked(event)" added to each planet div in index.html
+//Reassign target to the card just clicked then increment i
+
 function onCardClicked(planet) {
   let target = planet.currentTarget;
   target.className = target.className.replace("facedown", "");
   i++;
 
-  //Check for a match for each planet element, matching on "data-framework".
+  //Match Function
+  //Check for a match for each planet element, matching on "data-framework"
   //Point to matched or unmatched function
+
   if (i === 1) {
     firstCard = target;
     firstCard.classList.add("disabled");
@@ -31,8 +35,9 @@ function onCardClicked(planet) {
     }
   }
 
-  //Matched function
-  //Add the matches class to the firstCard and target, within a timeout of 2000ms
+  //Matched Function
+  //If data-framework matches on firstCard and Target, add the matches class to each, within a timeout of 1000ms
+  //Disable and then enable function added around the timeout of adding the matches class
   //Count the number of times a match is made
   function matched() {
     console.log("match function");
@@ -42,12 +47,15 @@ function onCardClicked(planet) {
       target.classList.add("matches");
       enable();
       j++;
-      console.log('no of pair '+j);
+      console.log("no of pair " + j);
       document.getElementById("pairCounter").innerHTML = j;
-    }, 2000);
-    }
+    }, 1000);
+    //if (j === 8) {console.log("finished")}
+  }
+  
 
-  //disable
+  //Disable Function
+  //Sets pointer events temporarily to none to limit the player to clicking on more than 2 cards before a 'match' or 'unmatch'
   function disable() {
     console.log("disable function");
     const allPlanets = document.querySelectorAll(".planet");
@@ -56,7 +64,8 @@ function onCardClicked(planet) {
     }
   }
 
-  //enable
+  //Enable Function
+  //Removes the pointer event disabled function to allow play to continue
   function enable() {
     console.log("enable function");
     const allPlanets = document.querySelectorAll(".planet");
@@ -67,7 +76,8 @@ function onCardClicked(planet) {
     }
   }
 
-  //Unmatched function
+  //Unmatched Function
+  //If data-framework does not match on firstCard and Target, add the 'facedown' (rocket image) back onto the object, within a timeout of 2000ms
   function unmatched() {
     console.log("nomatch function");
     disable();
@@ -78,7 +88,9 @@ function onCardClicked(planet) {
     }, 2000);
   }
 
-  //Counter
-  
-  }
+
+//Reset Game
+//Resets the planet elements back to original 'facedown' position
+}
+
 

@@ -14,11 +14,6 @@ body {
   text-align: center;
 }
 
-.home-button {
-  text-align: center;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
 
 .heading-home {
   padding: 1rem;
@@ -27,7 +22,7 @@ body {
 }
 
 /*-------------------------------------------------------------------------counter*/
-.counter-timer{
+.counter{
   background-color: #4774eb;
   color: #ffffff;
   border: #ffffff solid 0.25rem;
@@ -42,6 +37,25 @@ body {
 
 }
 
+.restart{
+background-color: #4774eb;
+  color: #ffffff;
+  border: #ffffff solid 0.25rem;
+  max-width: 10rem;
+  padding: 2rem;
+  margin: 0.4rem;
+  border-radius: 10px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#restartButton{
+    color: #ffffff;
+    background-color: none;
+    font-size: 1.5rem;
+}
+
 /*-------------------------------------------------------------------------planets*/
 .allplanets {
   padding: 2rem 0rem 2rem 0rem;
@@ -53,6 +67,9 @@ body {
     width: 85%;
     padding-bottom: 2rem;
     flex-wrap: nowrap;
+      text-align: center;
+   justify-content: center;
+   
    
     
 }
@@ -68,7 +85,6 @@ body {
   cursor: pointer;
   background-color: black;
   margin: 0.2rem;
-transition-property: background-color;
 }
 
 
