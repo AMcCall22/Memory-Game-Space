@@ -50,9 +50,7 @@ function onCardClicked(planet) {
       console.log("no of pair " + j);
       document.getElementById("pairCounter").innerHTML = j;
     }, 1000);
-    //if (j === 8) {console.log("finished")}
   }
-  
 
   //Disable Function
   //Sets pointer events temporarily to none to limit the player to clicking on more than 2 cards before a 'match' or 'unmatch'
@@ -87,10 +85,21 @@ function onCardClicked(planet) {
       enable();
     }, 2000);
   }
-
-
-//Reset Game
-//Resets the planet elements back to original 'facedown' position
 }
 
+//Reset Function
+// Reset functionality add to turn all planets back to 'facedown' class at any point in the game.  An 'onclick' has had the id of restart button in index.html.
 
+function reset() {
+  console.log("reset selected");
+  const allPlanets = document.querySelectorAll(".planet");
+  for (let i = 0; i < allPlanets.length; i++) {
+    allPlanets[i].classList.remove("matches");
+    allPlanets[i].classList.add("facedown");
+    allPlanets[i].classList.remove("disabled");
+  }
+  j = 0;
+  document.getElementById("pairCounter").innerHTML = j;
+  firstCard = 0;
+  i = 0;
+}
