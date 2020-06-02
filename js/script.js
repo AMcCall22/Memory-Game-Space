@@ -111,4 +111,9 @@ function reset() {
 function endModal() {
   let gameModal = document.getElementById("endGameModal");
   gameModal.classList.add("show");
+let closeButton = document.querySelector("#close-button");
+closeButton.addEventListener("click", function() {
+  gameModal.classList.toggle("closed");
 }
+
+)}
