@@ -1,12 +1,8 @@
-
-
 //Initialise variables.
 
 let firstCard = 0;
 let i = 0;
 let j = 0;
-
-
 
 //OnCardClicked Function
 //Create onCardClicked function to replace the facedown(rocket) image with the planet image
@@ -34,7 +30,7 @@ function onCardClicked(planet) {
       console.log("has been matched");
       matched();
 
-      if (j === 7) {
+      if (j > 6) {
         endModal();
       }
     } else {
@@ -57,7 +53,7 @@ function onCardClicked(planet) {
       j++;
       console.log("no of pair " + j);
       document.getElementById("pairCounter").innerHTML = j;
-    }, 50);
+    }, 1000);
   }
 
   //Disable Function
@@ -91,7 +87,7 @@ function onCardClicked(planet) {
       firstCard.classList.add("facedown");
       target.classList.add("facedown");
       enable();
-    }, 50);
+    }, 1000);
   }
 }
 
@@ -114,7 +110,7 @@ function reset() {
 
 function endModal() {
   let gameModal = document.getElementById("endGameModal");
-  gameModal.classList.add("show");
+  gameModal.classList.add("modalshow");
   let closeButton = document.querySelector("#end-close-button");
   closeButton.addEventListener("click", function () {
     gameModal.classList.toggle("closed");
@@ -124,9 +120,10 @@ function endModal() {
 
 function startModal() {
   let gameModal = document.getElementById("startGameModal");
-  gameModal.classList.add("show");
+  gameModal.classList.add("modalshow");
   let closeButton = document.querySelector("#start-close-button");
   closeButton.addEventListener("click", function () {
     gameModal.classList.toggle("closed");
   });
 }
+startModal();
