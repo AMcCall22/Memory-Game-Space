@@ -20,6 +20,14 @@
   </head>
 
   <body>
+    <!-- Start of Game Modal -->
+    <div class="modal fade modal-lg" id="startGameModal" role="dialog">
+      <div class="modal-content">
+        <button class="close-button" id="start-close-button">x</button>
+        <h2>Hello!</h2>
+        <h3>Welcome to the memory game!</h3>
+      </div>
+    </div>
     <header>
       <div class="row no-gutters heading-home">
         <div class="col-12">
@@ -31,10 +39,12 @@
     <section id="game">
       <div class="allplanets container">
         <div class="row no-gutters buttons">
-          <div class="col-6 counter">
-            <h3>Pairs <span id="pairCounter">0</span></h3>
+          <div class="col-12 counter">
+            <p>Pairs <span id="pairCounter">0</span></p>
           </div>
-          <div class="col-6 restart">
+        </div>
+        <div class="row no-gutters buttons">
+          <div class="col-12 restart">
             <div id="restartButton" onclick="reset()">
               <i class="fas fa-redo"></i>
             </div>
@@ -127,7 +137,7 @@
       <!-- End of Game Modal -->
       <div class="modal fade modal-lg" id="endGameModal" role="dialog">
         <div class="modal-content">
-          <button class="close-button" id="close-button">x</button>
+          <button class="close-button" id="end-close-button">x</button>
           <h2>Well done!</h2>
           <h3>You have completed the memory game!</h3>
         </div>
@@ -136,5 +146,10 @@
 
     <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="javascript">
+      $(window).on('load',function(){
+          $('#startGameModal').modal('show');
+      });
+    </script>
   </body>
 </html>

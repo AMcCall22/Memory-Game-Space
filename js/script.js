@@ -1,8 +1,12 @@
+
+
 //Initialise variables.
 
 let firstCard = 0;
 let i = 0;
 let j = 0;
+
+
 
 //OnCardClicked Function
 //Create onCardClicked function to replace the facedown(rocket) image with the planet image
@@ -111,13 +115,18 @@ function reset() {
 function endModal() {
   let gameModal = document.getElementById("endGameModal");
   gameModal.classList.add("show");
-  let closeButton = document.querySelector("#close-button");
+  let closeButton = document.querySelector("#end-close-button");
   closeButton.addEventListener("click", function () {
     gameModal.classList.toggle("closed");
     addEventListener("click", reset());
-j++
   });
-
-  
 }
 
+function startModal() {
+  let gameModal = document.getElementById("startGameModal");
+  gameModal.classList.add("show");
+  let closeButton = document.querySelector("#start-close-button");
+  closeButton.addEventListener("click", function () {
+    gameModal.classList.toggle("closed");
+  });
+}
