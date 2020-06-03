@@ -22,10 +22,21 @@
   <body>
     <!-- Start of Game Modal -->
     <div class="modal modal-lg" id="startGameModal" role="dialog">
-      <div class="modal-content">
-        <button class="close-button" id="start-close-button">X</button>
-        <h2>Hello!</h2>
-        <h3>Welcome to the memory game!</h3>
+      <div class="modal-content-start">
+        <button class="close-button-start" id="start-close-button">X</button>
+        <h3>Hello!</h3>
+        <h4>Welcome to a planet memory game!</h4>
+        <h4>How to Play:</h4>
+        <p>
+          Click on your first card and select a second to pair it with. If you
+          select a matched pair, the cards will turn blue. If you select an
+          unmatched pair, they will flip back over to yellow.
+        </p>
+        <p>
+          Once you have found 8 pairs, the game ends. Select the restart
+          button at any time to start again.
+        </p>
+        <p>Enjoy!</p>
       </div>
     </div>
     <header>
@@ -136,10 +147,11 @@
 
       <!-- End of Game Modal -->
       <div class="modal modal-lg" id="endGameModal" role="dialog">
-        <div class="modal-content">
-          <button class="close-button" id="end-close-button">x</button>
+        <div class="modal-content-end">
+          <button class="close-button-end" id="end-close-button">x</button>
           <h2>Well done!</h2>
           <h3>You have completed the memory game!</h3>
+          <p>Click the restart button if you want to play again!</p>
         </div>
       </div>
     </section>

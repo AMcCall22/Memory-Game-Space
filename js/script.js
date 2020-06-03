@@ -53,7 +53,7 @@ function onCardClicked(planet) {
       j++;
       console.log("no of pair " + j);
       document.getElementById("pairCounter").innerHTML = j;
-    }, 1000);
+    }, 20);
   }
 
   //Disable Function
@@ -87,7 +87,7 @@ function onCardClicked(planet) {
       firstCard.classList.add("facedown");
       target.classList.add("facedown");
       enable();
-    }, 1000);
+    }, 20);
   }
 }
 
@@ -109,13 +109,17 @@ function reset() {
 }
 
 function endModal() {
+  console.log("END");
+
   let gameModal = document.getElementById("endGameModal");
   gameModal.classList.add("modalshow");
   let closeButton = document.querySelector("#end-close-button");
   closeButton.addEventListener("click", function () {
     gameModal.classList.toggle("closed");
-    addEventListener("click", reset());
+    addEventListener("click", reset());   
   });
+gameModal.classList.remove("closed");
+
 }
 
 function startModal() {
