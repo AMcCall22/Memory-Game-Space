@@ -115,11 +115,11 @@ function endModal() {
   gameModal.classList.add("modalshow");
   let closeButton = document.querySelector("#end-close-button");
   closeButton.addEventListener("click", function () {
-    gameModal.classList.toggle("closed");
-    addEventListener("click", reset());   
+    gameModal.classList.add("closed");
+    addEventListener("click", reset());
+   
   });
 gameModal.classList.remove("closed");
-
 }
 
 function startModal() {
