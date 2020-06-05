@@ -14,6 +14,14 @@ function onCardClicked(planet) {
   target.className = target.className.replace("facedown", "");
   i++;
 
+//Add audio when card is clicked
+  const mySound = document.getElementById("sound");
+  document.querySelector("planet")
+    mySound.currentTime = 0;
+    mySound.play();
+    
+  
+
   //Match Function
   //Check for a match for each planet element, matching on "data-framework"
   //Point to matched or unmatched function
@@ -53,16 +61,16 @@ function onCardClicked(planet) {
       j++;
       console.log("no of pair " + j);
       document.getElementById("pairCounter").innerHTML = j;
-    }, 20);
+    }, 1000);
   }
 
   //Disable Function
   //Sets pointer events temporarily to none to limit the player to clicking on more than 2 cards before a 'match' or 'unmatch'
   function disable() {
     console.log("disable function");
-    const allPlanets = document.querySelectorAll(".planet");
-    for (let i = 0; i < allPlanets.length; i++) {
-      allPlanets[i].classList.add("disabled");
+    const planetContainer = document.querySelectorAll(".planet");
+    for (let i = 0; i < planetContainer.length; i++) {
+      planetContainer[i].classList.add("disabled");
     }
   }
 
@@ -70,10 +78,10 @@ function onCardClicked(planet) {
   //Removes the pointer event disabled function to allow play to continue
   function enable() {
     console.log("enable function");
-    const allPlanets = document.querySelectorAll(".planet");
-    for (let i = 0; i < allPlanets.length; i++) {
-      if (allPlanets[i].className.search("matches") === -1) {
-        allPlanets[i].classList.remove("disabled");
+    const planetContainer = document.querySelectorAll(".planet");
+    for (let i = 0; i < planetContainer.length; i++) {
+      if (planetContainer[i].className.search("matches") === -1) {
+        planetContainer[i].classList.remove("disabled");
       }
     }
   }
@@ -96,11 +104,11 @@ function onCardClicked(planet) {
 
 function reset() {
   console.log("reset selected");
-  const allPlanets = document.querySelectorAll(".planet");
-  for (let i = 0; i < allPlanets.length; i++) {
-    allPlanets[i].classList.remove("matches");
-    allPlanets[i].classList.add("facedown");
-    allPlanets[i].classList.remove("disabled");
+  const planetContainer = document.querySelectorAll(".planet");
+  for (let i = 0; i < planetContainer.length; i++) {
+    planetContainer[i].classList.remove("matches");
+    planetContainer[i].classList.add("facedown");
+    planetContainer[i].classList.remove("disabled");
   }
   j = 0;
   document.getElementById("pairCounter").innerHTML = j;
@@ -117,9 +125,9 @@ function endModal() {
   closeButton.addEventListener("click", function () {
     gameModal.classList.add("closed");
     addEventListener("click", reset());
-   
   });
-gameModal.classList.remove("closed");
+  gameModal.classList.remove("closed");
+  shuffle();
 }
 
 function startModal() {
@@ -131,3 +139,32 @@ function startModal() {
   });
 }
 startModal();
+
+//Fisher-Yates method Stackoverflow
+
+/*function shuffle(array) {
+    for (let i = (array.length-1); i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+// Planets Array
+function startGame() {
+  const planetContainer = document.querySelectorAll(".planet");
+  const planetsToShuffle = document.querySelector(".game-space");
+  let planets = shuffle(planetContainer);
+console.log(planets)
+  for (let i = 0; i < planets.length; i++) {
+    [].forEach.call(planets, function (item) {
+      planetsToShuffle.appendChild(item);
+      console.log(i);
+    });
+  }
+}
+
+startGame();
+console.log("shuffled");
+console.log(i);*/

@@ -64,7 +64,7 @@ body {
 }
 
 /*-------------------------------------------------------------------------planets*/
-.allplanets {
+.planetContainer {
   padding: 2rem 0rem 2rem 0rem;
 }
 
@@ -195,6 +195,19 @@ max-width: 100%;
 .modal.closed {
   display: none;
 }
+
+/*.fade-scale {
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+.fade-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}*/
 /*-------------------------------------------------------------------------media queries*/
 @media (max-width: 414px) {
 .modal{

@@ -10,6 +10,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
@@ -21,7 +22,8 @@
 
   <body>
     <!-- Start of Game Modal -->
-    <div class="modal modal-lg" id="startGameModal" role="dialog">
+
+    <div class="modal modal-lg" id="startGameModal" tabindex="-1" role="dialog">
       <div class="modal-content-start">
         <button class="close-button-start" id="start-close-button">X</button>
         <h3>Hello!</h3>
@@ -33,8 +35,8 @@
           unmatched pair, they will flip back over to yellow.
         </p>
         <p>
-          Once you have found 8 pairs, the game ends. Select the restart
-          button at any time to start again.
+          Once you have found 8 pairs, the game ends. Select the restart button
+          at any time to start again.
         </p>
         <p>Enjoy!</p>
       </div>
@@ -62,83 +64,86 @@
           </div>
         </div>
         <div class="row no-gutters justify-content-center game-space">
+          <audio id="sound">
+            <source src="assets/sounds/Card-flip.mp3" />
+          </audio>
           <div
-            class="col-3 jupiter planet facedown"
+            class="planet-card col-3 jupiter planet facedown"
             data-framework="jupiter-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 jupiter planet facedown"
+            class="planet-card col-3 jupiter planet facedown"
             data-framework="jupiter-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 uranus planet facedown"
+            class="planet-card col-3 uranus planet facedown"
             data-framework="uranus-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 uranus planet facedown"
+            class="planet-card col-3 uranus planet facedown"
             data-framework="uranus-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 saturn planet facedown"
+            class="planet-card col-3 saturn planet facedown"
             data-framework="saturn-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 saturn planet facedown"
+            class="planet-card col-3 saturn planet facedown"
             data-framework="saturn-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 neptune planet facedown"
+            class="planet-card col-3 neptune planet facedown"
             data-framework="neptune-card "
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 neptune planet facedown"
+            class="planet-card col-3 neptune planet facedown"
             data-framework="neptune-card "
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 mercury planet facedown"
+            class="planet-card col-3 mercury planet facedown"
             data-framework="mercury-card "
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 mercury planet facedown"
+            class="planet-card col-3 mercury planet facedown"
             data-framework="mercury-card "
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 earth planet facedown"
+            class="planet-card col-3 earth planet facedown"
             data-framework="earth-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 earth planet facedown"
+            class="planet-card col-3 earth planet facedown"
             data-framework="earth-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 mars planet facedown"
+            class="planet-card col-3 mars planet facedown"
             data-framework="mars-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 mars planet facedown"
+            class="planet-card col-3 mars planet facedown"
             data-framework="mars-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 venus planet facedown"
+            class="planet-card col-3 venus planet facedown"
             data-framework="venus-card"
             onclick="onCardClicked(event)"
           ></div>
           <div
-            class="col-3 venus planet facedown"
+            class="planet-card col-3 venus planet facedown"
             data-framework="venus-card"
             onclick="onCardClicked(event)"
           ></div>
@@ -157,5 +162,20 @@
     </section>
     <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
