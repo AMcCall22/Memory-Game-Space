@@ -94,7 +94,7 @@ function onCardClicked(planet) {
       firstCard.classList.add("facedown");
       target.classList.add("facedown");
       enable();
-    }, 20);
+    }, 1000);
   }
 }
 
@@ -114,31 +114,29 @@ function reset() {
   document.getElementById("pairCounter").innerHTML = j;
   firstCard = 0;
   i = 0;
+  shufflePlanets();
 }
 
 function endModal() {
   console.log("END");
-setTimeout(() => {
-          
-  let gameModal = document.getElementById("endGameModal");
-  gameModal.classList.add("modalshow");
-  //Add audio when modal is opened
-  const endModalSound = document.getElementById("endsound");
-  document.querySelector("modalshow");
-  endModalSound.play();
+  setTimeout(() => {
+    let gameModal = document.getElementById("endGameModal");
+    gameModal.classList.add("modalshow");
+    //Add audio when modal is opened
+    const endModalSound = document.getElementById("endsound");
+    document.querySelector("modalshow");
+    endModalSound.play();
 
-  //Close button on modal
-  let closeButton = document.querySelector("#end-close-button");
-  closeButton.addEventListener("click", function () {
-    gameModal.classList.add("closed");
-    addEventListener("click", reset());
-  });
+    //Close button on modal
+    let closeButton = document.querySelector("#end-close-button");
+    closeButton.addEventListener("click", function () {
+      gameModal.classList.add("closed");
+      addEventListener("click", reset());
+    });
 
-  gameModal.classList.remove("closed");
-}, 1000);
+    gameModal.classList.remove("closed");
+  }, 500);
 }
-
-
 
 function startModal() {
   let gameModal = document.getElementById("startGameModal");
@@ -150,34 +148,38 @@ function startModal() {
 }
 startModal();
 
-/*//Fisher-Yates method Stackoverflow
-let deck = [];
 
+//Firstly,nodelist of planets converts into array to allow shuffle to take place.
+let deck = gamespace.getElementsByClassName(".planet");
+function nodeList(deck) {
+  let arr = [];
+  for (let planet of deck) {
+    arr.push(planet);
+  }
+  return arr.slice();
+}
+
+//Shuffle function utilises the Fisher-Yates method.
+//This allows for random placing of planets within divs in the gamespace.
+//Logic obtained from StackOverflow. 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
-
   return array;
 }
 
-deck = [];
-
-//Planets Array
-function startGame() {
-  const planetContainer = document.querySelectorAll(".planet");
-  console.log(planetContainer);
-  const planetsToShuffle = document.querySelector("#game-space");
-
-  let planets = shuffle(planetsToShuffle);
-  console.log(planetsToShuffle);
-  for (let i = 0; i < planets.length; i++) {
-    [].forEach.call(planets, function (planet) {
-      planetsToShuffle.appendChild(planet);
-      console.log(i);
+//Once shuffle is complete, planets must be displayed randomly.
+function shufflePlanets() {
+  const planetsToShuffle = document.querySelectorAll(".planet");
+  let arrayOfPlanets = nodeList(planetsToShuffle);
+  const gameSpace = document.querySelector("#gamespace");
+  let shuffledPlanets = shuffle(arrayOfPlanets);
+  for (let i = 0; i < shuffledPlanets.length; i++) {
+    [].forEach.call(shuffledPlanets, function (shuffledPlanet) {
+      gameSpace.appendChild(shuffledPlanet);
     });
   }
 }
-
-startGame();*/
+shufflePlanets();

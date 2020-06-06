@@ -44,6 +44,8 @@ body {
 
 }
 
+
+
 .restart {
   background-color: #4774eb;
   color: #ffffff;
@@ -165,9 +167,6 @@ max-width: 100%;
   animation-duration: 0.4s
 }
 
-
-
-
 .modal-content-end {
   background-color: #ebbe47;
   color: #ffffff;
@@ -197,6 +196,8 @@ max-width: 100%;
 .modalshow {
   display: block;
 }
+
+
 
 .close-button-start {
   background-color: #47ebbe;
@@ -241,12 +242,12 @@ left: 50%;
     font-size: 1.5rem;
   }
    .counter {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
   .counter,
   .restart {
     max-width: 5rem;
-    max-height: 3rem;
+    max-height: 4rem;
   }
 }
 
