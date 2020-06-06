@@ -34,7 +34,7 @@ body {
   color: #ffffff;
   border: #ffffff solid 0.2rem;
   max-width: 10rem;
-  padding: 1rem;
+  padding: rem;
   margin: 0.4rem;
   border-radius: 10px;
   display: flex;
@@ -42,9 +42,12 @@ body {
   align-items: center;
   font-size: 2rem;
 
+
 }
 
-
+.pairs-counter{
+margin: 0rem 0.25rem 0rem 0.25rem;
+}
 
 .restart {
   background-color: #4774eb;
@@ -81,14 +84,9 @@ body {
   cursor: pointer;
   background-color: black;
   margin: 0.2rem;
-transition: all 1;
 }
 
-.playing {
-  transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
-}
+
 
 .disabled {
   pointer-events: none;
@@ -253,7 +251,7 @@ left: 50%;
   }
   .counter,
   .restart {
-    max-width: 5rem;
+    max-width: 5.5rem;
     max-height: 4rem;
   }
 }
