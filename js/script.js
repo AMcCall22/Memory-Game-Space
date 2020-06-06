@@ -3,6 +3,7 @@
 let firstCard = 0;
 let i = 0;
 let j = 0;
+let k = 0;
 
 //OnCardClicked Function
 //Create onCardClicked function to replace the facedown(rocket) image with the planet image
@@ -13,12 +14,17 @@ function onCardClicked(planet) {
   let target = planet.currentTarget;
   target.className = target.className.replace("facedown", "");
   i++;
+  console.log(i);
 
   //Add audio when card is clicked
   const mySound = document.getElementById("sound");
   document.querySelector("planet");
   mySound.currentTime = 0;
   mySound.play();
+
+  //Counter to provide total number of clicks per game
+  k++;
+  document.getElementById("Counter").innerHTML = k;
 
   //Match Function
   //Check for a match for each planet element, matching on "data-framework"
@@ -114,6 +120,8 @@ function reset() {
   document.getElementById("pairCounter").innerHTML = j;
   firstCard = 0;
   i = 0;
+  k = 0;
+  document.getElementById("Counter").innerHTML = k;
   shufflePlanets();
 }
 
@@ -148,7 +156,6 @@ function startModal() {
 }
 startModal();
 
-
 //Firstly,nodelist of planets converts into array to allow shuffle to take place.
 let deck = gamespace.getElementsByClassName(".planet");
 function nodeList(deck) {
@@ -161,7 +168,7 @@ function nodeList(deck) {
 
 //Shuffle function utilises the Fisher-Yates method.
 //This allows for random placing of planets within divs in the gamespace.
-//Logic obtained from StackOverflow. 
+//Logic obtained from StackOverflow.
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
