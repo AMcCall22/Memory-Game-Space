@@ -14,13 +14,11 @@ function onCardClicked(planet) {
   target.className = target.className.replace("facedown", "");
   i++;
 
-//Add audio when card is clicked
+  //Add audio when card is clicked
   const mySound = document.getElementById("sound");
-  document.querySelector("planet")
-    mySound.currentTime = 0;
-    mySound.play();
-    
-  
+  document.querySelector("planet");
+  mySound.currentTime = 0;
+  mySound.play();
 
   //Match Function
   //Check for a match for each planet element, matching on "data-framework"
@@ -65,7 +63,8 @@ function onCardClicked(planet) {
   }
 
   //Disable Function
-  //Sets pointer events temporarily to none to limit the player to clicking on more than 2 cards before a 'match' or 'unmatch'
+  //Sets pointer events temporarily to none.
+  //This limits the player to clicking on more than 2 cards before a 'match' or 'unmatch'
   function disable() {
     console.log("disable function");
     const planetContainer = document.querySelectorAll(".planet");
@@ -87,7 +86,7 @@ function onCardClicked(planet) {
   }
 
   //Unmatched Function
-  //If data-framework does not match on firstCard and Target, add the 'facedown' (rocket image) back onto the object, within a timeout of 2000ms
+  //If data-framework does not match on firstCard and Target, add the 'facedown' (rocket image) onto the object, within a timeout of 2000ms
   function unmatched() {
     console.log("nomatch function");
     disable();
@@ -100,7 +99,8 @@ function onCardClicked(planet) {
 }
 
 //Reset Function
-// Reset functionality add to turn all planets back to 'facedown' class at any point in the game.  An 'onclick' has had the id of restart button in index.html.
+//Reset functionality add to turn all planets back to 'facedown' class at any point in the game.
+//An 'onclick' has had the id of restart button in index.html
 
 function reset() {
   console.log("reset selected");
@@ -118,17 +118,27 @@ function reset() {
 
 function endModal() {
   console.log("END");
-
+setTimeout(() => {
+          
   let gameModal = document.getElementById("endGameModal");
   gameModal.classList.add("modalshow");
+  //Add audio when modal is opened
+  const endModalSound = document.getElementById("endsound");
+  document.querySelector("modalshow");
+  endModalSound.play();
+
+  //Close button on modal
   let closeButton = document.querySelector("#end-close-button");
   closeButton.addEventListener("click", function () {
     gameModal.classList.add("closed");
     addEventListener("click", reset());
   });
+
   gameModal.classList.remove("closed");
-  shuffle();
+}, 1000);
 }
+
+
 
 function startModal() {
   let gameModal = document.getElementById("startGameModal");
@@ -140,31 +150,34 @@ function startModal() {
 }
 startModal();
 
-//Fisher-Yates method Stackoverflow
+/*//Fisher-Yates method Stackoverflow
+let deck = [];
 
-/*function shuffle(array) {
-    for (let i = (array.length-1); i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        let temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+
+  return array;
 }
 
-// Planets Array
+deck = [];
+
+//Planets Array
 function startGame() {
   const planetContainer = document.querySelectorAll(".planet");
-  const planetsToShuffle = document.querySelector(".game-space");
-  let planets = shuffle(planetContainer);
-console.log(planets)
+  console.log(planetContainer);
+  const planetsToShuffle = document.querySelector("#game-space");
+
+  let planets = shuffle(planetsToShuffle);
+  console.log(planetsToShuffle);
   for (let i = 0; i < planets.length; i++) {
-    [].forEach.call(planets, function (item) {
-      planetsToShuffle.appendChild(item);
+    [].forEach.call(planets, function (planet) {
+      planetsToShuffle.appendChild(planet);
       console.log(i);
     });
   }
 }
 
-startGame();
-console.log("shuffled");
-console.log(i);*/
+startGame();*/

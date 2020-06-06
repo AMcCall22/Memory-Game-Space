@@ -63,9 +63,9 @@
             </div>
           </div>
         </div>
-        <div class="row no-gutters justify-content-center game-space">
+        <div class="row no-gutters justify-content-center" id="game-space">
           <audio id="sound">
-            <source src="assets/sounds/Card-flip.mp3" />
+            <source src="assets/sounds/drip.wav" />
           </audio>
           <div
             class="planet-card col-3 jupiter planet facedown"
@@ -152,6 +152,9 @@
 
       <!-- End of Game Modal -->
       <div class="modal modal-lg" id="endGameModal" role="dialog">
+        <audio id="endsound">
+          <source src="assets/sounds/bing.wav" />
+        </audio>
         <div class="modal-content-end">
           <button class="close-button-end" id="end-close-button">x</button>
           <h2>Well done!</h2>

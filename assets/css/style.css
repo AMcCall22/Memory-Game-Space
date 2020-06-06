@@ -143,7 +143,7 @@ body {
 top: 40%;
 left: 50%;
 transform: translate(-50%, -50%);
-height: 450px;
+height: 470px;
 max-height: 100%;
 width: 400px;
 max-width: 100%;
@@ -220,18 +220,6 @@ max-width: 100%;
   display: none;
 }
 
-/*.fade-scale {
-  transform: scale(0);
-  opacity: 0;
-  -webkit-transition: all .25s linear;
-  -o-transition: all .25s linear;
-  transition: all .25s linear;
-}
-
-.fade-scale.in {
-  opacity: 1;
-  transform: scale(1);
-}*/
 /*-------------------------------------------------------------------------media queries*/
 @media (max-width: 414px) {
 .modal{
