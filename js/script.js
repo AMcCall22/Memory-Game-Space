@@ -146,12 +146,17 @@ function endModal() {
   }, 500);
 }
 
+//Trigger start modal
+//Close button functionality added
+//Enable class added following the closure of the modal.  Disabled class added in HTML.
 function startModal() {
   let gameModal = document.getElementById("startGameModal");
   gameModal.classList.add("modalshow");
   let closeButton = document.querySelector("#start-close-button");
   closeButton.addEventListener("click", function () {
     gameModal.classList.toggle("closed");
+    let gameSpaceEnable = document.getElementById("gamespace");
+    gameSpaceEnable.classList.add("enabled");
   });
 }
 startModal();
