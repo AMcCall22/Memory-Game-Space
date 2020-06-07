@@ -35,7 +35,7 @@ body {
   border: #ffffff solid 0.2rem;
   max-width: 10rem;
   margin: 0.4rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   display: flex;
   justify-content: center;
   font-size: 2rem;
@@ -52,7 +52,7 @@ body {
   max-width: 5rem;
   padding: 0.5rem;
   margin: 0.4rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   display: flex;
   justify-content: center;
 }
@@ -72,7 +72,7 @@ body {
   height: 8rem;
   max-width: 15rem;
   border: #ffffff solid 0.2rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -126,7 +126,7 @@ body {
   height: 8rem;
   max-width: 15rem;
   border: #ffffff solid 0.2rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -144,16 +144,16 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 470px;
+  height: 29.375rem;
   max-height: 100%;
-  width: 400px;
+  width: 25rem;
   max-width: 100%;
 }
 .modal-content-start,
 .modal-content-end {
   color: #ffffff;
   margin: auto;
-  padding: 20px;
+  padding: 1.25rem;
   border: 0.2rem solid #ffffff;
   text-align: center;
   display: inline-block;
@@ -174,7 +174,7 @@ body {
 /* Add Animation */
 @-webkit-keyframes slideIn {
   from {
-    top: -200px;
+    top: -12.5rem;
     opacity: 0;
   }
   to {
@@ -185,7 +185,7 @@ body {
 
 @keyframes slideIn {
   from {
-    top: -200px;
+    top: -12.5rem;
     opacity: 0;
   }
   to {
@@ -222,9 +222,9 @@ body {
 /*-------------------------------------------------------------------------media queries*/
 @media (max-width: 414px) {
   .modal {
-    height: 550px;
+    height: 34.375rem;
     max-height: 85%;
-    width: 420px;
+    width: 41.25rem;
     max-width: 80%;
     top: 50%;
     left: 50%;
@@ -255,9 +255,9 @@ body {
     max-width: 4rem;
   }
   .modal {
-    height: 500px;
+    height: 31.25rem;
     max-height: 100%;
-    width: 500px;
+    width: 31.25rem;
     max-width: 95%;
     top: 55%;
     left: 50%;
