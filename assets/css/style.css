@@ -85,6 +85,8 @@ body {
   pointer-events: none;
 }
 
+.planet:hover{
+border: #4774eb solid .2rem}
 /*-------------------------------------------------------------------------planets*/
 .earth {
   background-image: url("../images/planets/earth.jpg");

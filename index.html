@@ -22,7 +22,6 @@
 
   <body>
     <!-- Start of Game Modal -->
-
     <div class="modal modal-lg" id="startGameModal" tabindex="-1" role="dialog">
       <div class="modal-content-start">
         <button class="close-button-start" id="start-close-button">X</button>
@@ -42,6 +41,7 @@
         </p>
       </div>
     </div>
+    <!-- Header -->
     <header>
       <div class="row no-gutters heading-home">
         <div class="col-12">
@@ -50,6 +50,7 @@
         </div>
       </div>
     </header>
+    <!-- Main Game Area-->
     <section id="game">
       <div class="allplanets container">
         <div class="row no-gutters buttons">
@@ -67,10 +68,12 @@
             </div>
           </div>
         </div>
+        <!-- Planets-->
+      
         <div class="row no-gutters justify-content-center" id="gamespace">
-          <audio id="sound">
-            <source src="assets/sounds/drip.wav" />
-          </audio>
+  <audio id="sound">
+          <source src="assets/sounds/drip.wav" />
+        </audio>
           <div
             class="col-3 jupiter planet facedown"
             data-framework="jupiter-card"
@@ -153,7 +156,6 @@
           ></div>
         </div>
       </div>
-
       <!-- End of Game Modal -->
       <div class="modal modal-lg" id="endGameModal" role="dialog">
         <audio id="endsound">
@@ -170,6 +172,7 @@
         </div>
       </div>
     </section>
+    <!-- Scripts -->
     <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script

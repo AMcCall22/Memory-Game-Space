@@ -100,7 +100,7 @@ function onCardClicked(planet) {
       firstCard.classList.add("facedown");
       target.classList.add("facedown");
       enable();
-    }, 1000);
+    }, 2000);
   }
 }
 
