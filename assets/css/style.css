@@ -19,7 +19,7 @@ body {
   color: #ffffff;
 }
 
-/*-------------------------------------------------------------------------counter*/
+/*-------------------------------------------------------------------------counter/pairs/restart*/
 .buttons {
   margin: auto;
   width: 85%;
@@ -34,23 +34,19 @@ body {
   color: #ffffff;
   border: #ffffff solid 0.2rem;
   max-width: 10rem;
-  padding: rem;
   margin: 0.4rem;
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
   font-size: 2rem;
-
-
 }
 
-.pairs-counter{
-margin: 0rem 0.25rem 0rem 0.25rem;
+.pairs-counter {
+  margin: 0rem 0.25rem 0rem 0.25rem;
 }
 
 .restart {
-  background-color: #4774eb;
+  background-color: #ebbe47;
   color: #ffffff;
   border: #ffffff solid 0.2rem;
   max-width: 5rem;
@@ -59,7 +55,6 @@ margin: 0rem 0.25rem 0rem 0.25rem;
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 #restartButton {
@@ -85,8 +80,6 @@ margin: 0rem 0.25rem 0rem 0.25rem;
   background-color: black;
   margin: 0.2rem;
 }
-
-
 
 .disabled {
   pointer-events: none;
@@ -125,6 +118,7 @@ margin: 0rem 0.25rem 0rem 0.25rem;
   background-image: url("../images/planets/venus.jpg");
 }
 
+/*-------------------------------------------------------------------------facedown/matches*/
 .facedown {
   background-image: url("../images/planets/rocket.png");
   background-size: contain;
@@ -147,18 +141,16 @@ margin: 0rem 0.25rem 0rem 0.25rem;
 
 /*-------------------------------------------------------------------------modals*/
 .modal {
-top: 40%;
-left: 50%;
-transform: translate(-50%, -50%);
-height: 470px;
-max-height: 100%;
-width: 400px;
-max-width: 100%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 470px;
+  max-height: 100%;
+  width: 400px;
+  max-width: 100%;
 }
-
-
-.modal-content-start {
-  background-color: #4774eb;
+.modal-content-start,
+.modal-content-end {
   color: #ffffff;
   margin: auto;
   padding: 20px;
@@ -169,57 +161,58 @@ max-width: 100%;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.4s;
   animation-name: slideIn;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
+}
+.modal-content-start {
+  background-color: #4774eb;
 }
 
 .modal-content-end {
   background-color: #ebbe47;
-  color: #ffffff;
-  margin: auto;
-  padding: 20px;
-  border: 0.2rem solid #ffffff;
-  text-align: center;
-  display: inline-block;
-  position: fixed;
-  -webkit-animation-name: slideIn;
-  -webkit-animation-duration: 0.4s;
-  animation-name: slideIn;
-  animation-duration: 0.4s
 }
 
 /* Add Animation */
 @-webkit-keyframes slideIn {
-  from {top: -200px; opacity: 0} 
-  to {top: 0; opacity: 1}
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 @keyframes slideIn {
-  from {top: -200px; opacity: 0}
-  to {top: 0; opacity: 1}
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .modalshow {
   display: block;
 }
+/*-------------------------------------------------------------------------modal close buttons*/
+.close-button-start,
+.close-button-end {
+  color: #ffffff;
+  width: 1.5rem;
+  float: right;
+  border: #ffffff solid 0.1rem;
+  border-radius: 0.2rem;
 
-
+}
 
 .close-button-start {
   background-color: #47ebbe;
-  color: #ffffff;
-  width: 1.5rem;
-  float: right;
-  border: #ffffff solid 0.1rem;
-  border-radius: 0.2rem;
 }
-
 .close-button-end {
   background-color: #4774eb;
-  color: #ffffff;
-  width: 1.5rem;
-  float: right;
-  border: #ffffff solid 0.1rem;
-  border-radius: 0.2rem;
 }
 
 .modal.closed {
@@ -228,14 +221,14 @@ max-width: 100%;
 
 /*-------------------------------------------------------------------------media queries*/
 @media (max-width: 414px) {
-.modal{
-height: 550px;
-max-height: 85%;
-width: 420px;
-max-width: 80%;
-top: 50%;
-left: 50%;
-}
+  .modal {
+    height: 550px;
+    max-height: 85%;
+    width: 420px;
+    max-width: 80%;
+    top: 50%;
+    left: 50%;
+  }
   .planet {
     height: 5rem;
     max-width: 5rem;
@@ -246,7 +239,7 @@ left: 50%;
   .game-title {
     font-size: 1.5rem;
   }
-   .counter {
+  .counter {
     font-size: 1.15rem;
   }
   .counter,
@@ -256,39 +249,36 @@ left: 50%;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .planet {
-    height: 4.5rem;
-    max-width: 4.5rem;
+    height: 4rem;
+    max-width: 4rem;
   }
-.modal{
+  .modal {
     height: 500px;
     max-height: 100%;
     width: 500px;
     max-width: 95%;
-    top:55%;
+    top: 55%;
     left: 50%;
-}
-}
-
-@media (min-width: 992px) {
-.modal{
-    top:30%;
-}
- .planet {
-    height: 11.5rem;
-    max-width: 11.5rem;
   }
 }
-@media (min-width: 1200px) {
-.modal{
-    top:40%;
+
+@media (min-width: 768px) {
+  .modal {
+    top: 30%;
+  }
+  .planet {
+    height:8rem;
+    max-width: 9rem;
+  }
 }
- .planet {
+@media (min-width: 1024px) {
+  .modal {
+    top: 40%;
+  }
+  .planet {
     height: 8rem;
     max-width: 15rem;
   }
 }
-
-
-
