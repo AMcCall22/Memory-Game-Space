@@ -148,7 +148,7 @@ function endModal() {
 
 //Trigger start modal
 //Close button functionality added
-//Enable class added following the closure of the modal.  Disabled class added in HTML.
+//Enable class added following the closure of the modal.  Disabled class added in H
 function startModal() {
   let gameModal = document.getElementById("startGameModal");
   gameModal.classList.add("modalshow");
