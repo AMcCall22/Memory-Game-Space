@@ -23,11 +23,10 @@
   <body>
     <!-- Start of Game Modal -->
     <div class="modal modal-lg" id="startGameModal" tabindex="-1" role="dialog">
-
       <div class="modal-content-start">
-
-
-        <button class="close-button-start" id="start-close-button">&times</button>
+        <button class="close-button-start" id="start-close-button">
+          &times
+        </button>
         <h4>Planet Memory Game</h4>
         <h4>How to Play:</h4>
         <p>
@@ -66,17 +65,27 @@
         </div>
         <div class="row no-gutters buttons">
           <div class="col-12 restart">
-            <div id="restartButton" onclick="reset()">
+            <div
+              id="restartButton"
+              onclick="reset()"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="Restart"
+            >
               <i class="fas fa-redo"></i>
             </div>
           </div>
         </div>
+
         <!-- Planets-->
-      
-        <div class="row no-gutters justify-content-center disabled" id="gamespace">
-  <audio id="sound" preload="auto">
-          <source src="assets/sounds/drip.wav" />
-        </audio>
+
+        <div
+          class="row no-gutters justify-content-center disabled"
+          id="gamespace"
+        >
+          <audio id="sound" preload="auto">
+            <source src="assets/sounds/drip.wav" />
+          </audio>
           <div
             class="col-3 jupiter planet facedown"
             data-framework="jupiter-card"
