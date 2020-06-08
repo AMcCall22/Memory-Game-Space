@@ -1,14 +1,12 @@
-@import url(<linkhref="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap">);
+@import url('https://fonts.googleapis.com/css?family=Balsamiq+Sans&display=swap');
 
 /*-------------------------------------------------------------------------body*/
 body {
   padding: 0rem;
   font-family: "Balsamiq Sans", cursive;
   background-color: #47ebbe;
-background-image: url("../images/planets/starBackground.png");
-
-
-
+  background-image: url("../images/planets/starBackground.png");
+  background-size: contain;
 }
 /*-------------------------------------------------------------------------header*/
 .page-title {
@@ -20,14 +18,13 @@ background-image: url("../images/planets/starBackground.png");
   padding: 1rem;
   text-align: center;
   color: #ffffff;
-
-justify-content: center;
-
-
+  justify-content: center;
 }
-.titles{
-max-width: 50%;
-background-color: #47ebbe;
+
+.titles {
+  max-width: 50%;
+  background-color: #47ebbe;
+
 }
 
 /*-------------------------------------------------------------------------counter/pairs/restart*/
@@ -70,13 +67,12 @@ background-color: #47ebbe;
 
 #restartButton {
   color: #ffffff;
-  background-color: none;
   font-size: 1.5rem;
 }
 
 /*-------------------------------------------------------------------------planets*/
-#gamespace{
-background-color: #47ebbe;
+#gamespace {
+  background-color: #47ebbe;
 }
 
 .planet {
@@ -97,11 +93,12 @@ background-color: #47ebbe;
 }
 
 .enabled {
-pointer-events: auto;
+  pointer-events: auto;
 }
 
-.planet:hover{
-border: #4774eb solid .2rem}
+.planet:hover {
+  border: #4774eb solid 0.2rem;
+}
 /*-------------------------------------------------------------------------planets*/
 .earth {
   background-image: url("../images/planets/earth.jpg");
@@ -188,7 +185,6 @@ border: #4774eb solid .2rem}
   background-color: #ebbe47;
 }
 
-/* Add Animation */
 @-webkit-keyframes slideIn {
   from {
     top: -12.5rem;
@@ -222,7 +218,6 @@ border: #4774eb solid .2rem}
   float: right;
   border: #ffffff solid 0.1rem;
   border-radius: 0.2rem;
-
 }
 
 .close-button-start {
@@ -286,7 +281,7 @@ border: #4774eb solid .2rem}
     top: 30%;
   }
   .planet {
-    height:8rem;
+    height: 8rem;
     max-width: 9rem;
   }
 }
@@ -297,5 +292,11 @@ border: #4774eb solid .2rem}
   .planet {
     height: 8rem;
     max-width: 15rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .planet:hover {
+    border: #ffffff solid 0.2rem;
   }
 }

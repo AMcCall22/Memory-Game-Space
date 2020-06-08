@@ -1,197 +1,191 @@
-//Initialise variables.
-
+//Initialise variables
 let firstCard = 0;
 let i = 0;
 let j = 0;
 let k = 0;
 
+
 //OnCardClicked Function
-//Create onCardClicked function to replace the facedown(rocket) image with the planet image
-//onclick ="onCardClicked(event)" added to each planet div in index.html
-//Reassign target to the card just clicked then increment i
-
+//This replaces the facedown(rocket)image with the planet image
+//onmousedown ="onCardClicked(event)" added to each planet div in index.html
+//Reassign target to the planet just clicked then increment i
 function onCardClicked(planet) {
-  let target = planet.currentTarget;
-  target.className = target.className.replace("facedown", "");
-  i++;
-  console.log(i);
+    let target = planet.currentTarget;
+    target.className = target.className.replace("facedown", "");
+    i++;
 
-  //Add audio when card is clicked
-  const mySound = document.getElementById("sound");
-  document.querySelector("planet");
-  mySound.currentTime = 0;
-  mySound.play();
+    //Add audio when planet is clicked
+    const mySound = document.getElementById("sound");
+    document.querySelector("planet");
+    mySound.currentTime = 0;
+    mySound.play();
 
-  //Counter to provide total number of clicks per game
-  k++;
-  document.getElementById("Counter").innerHTML = k;
 
-  //Match Function
-  //Check for a match for each planet element, matching on "data-framework"
-  //Point to matched or unmatched function
 
-  if (i === 1) {
-    firstCard = target;
-    firstCard.classList.add("disabled");
-  } else {
-    i = 0;
-    if (
-      firstCard.getAttribute("data-framework") ===
-      target.getAttribute("data-framework")
-    ) {
-      console.log("has been matched");
-      matched();
+    //Counter provides total number of clicks per game
+    k++;
+    document.getElementById("Counter").innerHTML = k;
 
-      if (j > 6) {
-        endModal();
-      }
+    //Match Function
+    //Check for a match for each planet element, matching on "data-framework"
+    //Point to matched or unmatched function
+
+    if (i === 1) {
+        firstCard = target;
+        firstCard.classList.add("disabled");
     } else {
-      console.log("has not been matched");
-      unmatched();
+        i = 0;
+        if (
+            firstCard.getAttribute("data-framework") ===
+            target.getAttribute("data-framework")
+        ) {
+            matched();
+
+            if (j > 6) {
+                endModal();
+            }
+        } else {
+            unmatched();
+        }
     }
-  }
 
-  //Matched Function
-  //If data-framework matches on firstCard and Target, add the matches class to each, within a timeout of 1000ms
-  //Disable and then enable function added around the timeout of adding the matches class
-  //Count the number of times a match is made
-  function matched() {
-    console.log("match function");
-    disable();
-    setTimeout(() => {
-      firstCard.classList.add("matches");
-      target.classList.add("matches");
-      enable();
-      j++;
-      console.log("no of pair " + j);
-      document.getElementById("pairCounter").innerHTML = j;
-    }, 1000);
-  }
-
-  //Disable Function
-  //Sets pointer events temporarily to none.
-  //This limits the player to clicking on more than 2 cards before a 'match' or 'unmatch'
-  function disable() {
-    console.log("disable function");
-    const planetContainer = document.querySelectorAll(".planet");
-    for (let i = 0; i < planetContainer.length; i++) {
-      planetContainer[i].classList.add("disabled");
+    //Matched Function
+    //If data-framework matches on firstCard and target, add the matches class to each
+    // A timeout of 1000ms is added to give sufficent time before the matched class appears
+    //Disable/enable functions added around the timeout to prevent user clicking > 2 planets
+    //j counts the number of times a match is made
+    function matched() {
+        disable();
+        setTimeout(() => {
+            firstCard.classList.add("matches");
+            target.classList.add("matches");
+            enable();
+            j++;
+            document.getElementById("pairCounter").innerHTML = j;
+        }, 1000);
     }
-  }
 
-  //Enable Function
-  //Removes the pointer event disabled function to allow play to continue
-  function enable() {
-    console.log("enable function");
-    const planetContainer = document.querySelectorAll(".planet");
-    for (let i = 0; i < planetContainer.length; i++) {
-      if (planetContainer[i].className.search("matches") === -1) {
-        planetContainer[i].classList.remove("disabled");
-      }
+    //Disable Function
+    //Sets pointer events temporarily to none
+    function disable() {
+        const planetContainer = document.querySelectorAll(".planet");
+        for (let i = 0; i < planetContainer.length; i++) {
+            planetContainer[i].classList.add("disabled");
+        }
     }
-  }
 
-  //Unmatched Function
-  //If data-framework does not match on firstCard and Target, add the 'facedown' (rocket image) onto the object, within a timeout of 2000ms
-  function unmatched() {
-    console.log("nomatch function");
-    disable();
-    setTimeout(() => {
-      firstCard.classList.add("facedown");
-      target.classList.add("facedown");
-      enable();
-    }, 2000);
-  }
+    //Enable Function
+    //Removes the pointer event disabled function to allow play to continue
+    function enable() {
+        const planetContainer = document.querySelectorAll(".planet");
+        for (let i = 0; i < planetContainer.length; i++) {
+            if (planetContainer[i].className.search("matches") === -1) {
+                planetContainer[i].classList.remove("disabled");
+            }
+        }
+    }
+
+    //Unmatched Function
+    //If data-framework does not match,add the 'facedown' class to the planet
+    // A timeout of 1000ms is added to give sufficent time to view the position of images
+    function unmatched() {
+        disable();
+        setTimeout(() => {
+            firstCard.classList.add("facedown");
+            target.classList.add("facedown");
+            enable();
+        }, 2000);
+    }
 }
 
 //Reset Function
-//Reset functionality add to turn all planets back to 'facedown' class at any point in the game.
-//An 'onclick' has had the id of restart button in index.html
-
+//Resets all planets back to 'facedown' class at any point in the game
+//Resets 'pairs' and 'clicks' counters back to 0
+//Calls the Shuffled Planets function
 function reset() {
-  console.log("reset selected");
-  const planetContainer = document.querySelectorAll(".planet");
-  for (let i = 0; i < planetContainer.length; i++) {
-    planetContainer[i].classList.remove("matches");
-    planetContainer[i].classList.add("facedown");
-    planetContainer[i].classList.remove("disabled");
-  }
-  j = 0;
-  document.getElementById("pairCounter").innerHTML = j;
-  firstCard = 0;
-  i = 0;
-  k = 0;
-  document.getElementById("Counter").innerHTML = k;
-  shufflePlanets();
+    const planetContainer = document.querySelectorAll(".planet");
+    for (let i = 0; i < planetContainer.length; i++) {
+        planetContainer[i].classList.remove("matches");
+        planetContainer[i].classList.add("facedown");
+        planetContainer[i].classList.remove("disabled");
+    }
+    j = 0;
+    document.getElementById("pairCounter").innerHTML = j;
+    firstCard = 0;
+    i = 0;
+    k = 0;
+    document.getElementById("Counter").innerHTML = k;
+    shuffledPlanets();
 }
 
+//End Modal
+//This is called when a player completes the game and finds 8 pairs
+//Audio is added when modal is triggered
+//Close button on modal also calls the reset function
 function endModal() {
-  console.log("END");
-  setTimeout(() => {
-    let gameModal = document.getElementById("endGameModal");
-    gameModal.classList.add("modalshow");
-    //Add audio when modal is opened
-    const endModalSound = document.getElementById("endsound");
-    document.querySelector("modalshow");
-    endModalSound.play();
-
-    //Close button on modal
-    let closeButton = document.querySelector("#end-close-button");
-    closeButton.addEventListener("click", function () {
-      gameModal.classList.add("closed");
-      addEventListener("click", reset());
-    });
-
-    gameModal.classList.remove("closed");
-  }, 500);
+    setTimeout(() => {
+        let gameModal = document.getElementById("endGameModal");
+        gameModal.classList.add("modalshow");
+        const endModalSound = document.getElementById("endsound");
+        document.querySelector("modalshow");
+        endModalSound.play();
+        let closeButton = document.querySelector("#end-close-button");
+        closeButton.addEventListener("click", function() {
+            gameModal.classList.add("closed");
+            addEventListener("click", reset());
+        });
+        gameModal.classList.remove("closed");
+    }, 500);
 }
 
-//Trigger start modal
+//Start modal
+//This is called whent the webpage is loaded
 //Close button functionality added
-//Enable class added following the closure of the modal.  Disabled class added in H
+//Enable class added following the closure of the modal to allow play to commence
 function startModal() {
-  let gameModal = document.getElementById("startGameModal");
-  gameModal.classList.add("modalshow");
-  let closeButton = document.querySelector("#start-close-button");
-  closeButton.addEventListener("click", function () {
-    gameModal.classList.toggle("closed");
-    let gameSpaceEnable = document.getElementById("gamespace");
-    gameSpaceEnable.classList.add("enabled");
-  });
+    let gameModal = document.getElementById("startGameModal");
+    gameModal.classList.add("modalshow");
+    let closeButton = document.querySelector("#start-close-button");
+    closeButton.addEventListener("click", function() {
+        gameModal.classList.toggle("closed");
+        let gameSpaceEnable = document.getElementById("gamespace");
+        gameSpaceEnable.classList.add("enabled");
+    });
 }
 startModal();
 
-//Firstly,nodelist of planets converts into array to allow shuffle to take place.
+//Nodelist of planets converts into array to allow shuffle to take place
 let deck = gamespace.getElementsByClassName(".planet");
-function nodeList(deck) {
-  let arr = [];
-  for (let planet of deck) {
-    arr.push(planet);
-  }
-  return arr.slice();
-}
 
-//Shuffle function utilises the Fisher-Yates method.
+function nodeList(deck) {
+    let arr = [];
+    for (let planet of deck) {
+        arr.push(planet);
+    }
+    return arr.slice();
+}
+//Shuffle Function
+//Shuffle function utilises the Fisher-Yates method
 //This allows for random placing of planets within divs in the gamespace.
 //Logic obtained from StackOverflow.
 function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
-
-//Once shuffle is complete, planets must be displayed randomly.
-function shufflePlanets() {
-  const planetsToShuffle = document.querySelectorAll(".planet");
-  let arrayOfPlanets = nodeList(planetsToShuffle);
-  const gameSpace = document.querySelector("#gamespace");
-  let shuffledPlanets = shuffle(arrayOfPlanets);
-  for (let i = 0; i < shuffledPlanets.length; i++) {
-    [].forEach.call(shuffledPlanets, function (shuffledPlanet) {
-      gameSpace.appendChild(shuffledPlanet);
-    });
-  }
+//Shuffled Planets Function
+//Once shuffle is complete, planets are displayed randomly
+function shuffledPlanets() {
+    const planetsToShuffle = document.querySelectorAll(".planet");
+    let arrayOfPlanets = nodeList(planetsToShuffle);
+    const gameSpace = document.querySelector("#gamespace");
+    let shuffledPlanets = shuffle(arrayOfPlanets);
+    for (let i = 0; i < shuffledPlanets.length; i++) {
+        [].forEach.call(shuffledPlanets, function(shuffledPlanet) {
+            gameSpace.appendChild(shuffledPlanet);
+        });
+    }
 }
-shufflePlanets();
+shuffledPlanets();
