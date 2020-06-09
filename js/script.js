@@ -113,7 +113,7 @@ function reset() {
   firstClick = true;
   clickCount = 0;
   document.getElementById("Counter").innerHTML = clickCount;
-  shuffledPlanets();
+  shufflePlanets();
 }
 
 //End Modal
@@ -178,15 +178,15 @@ function shuffle(array) {
 //Calls shuffle function
 //Once shuffle is complete, append planets back into the game
 //Logic borrowed and amended - https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
-function shuffledPlanets() {
+function shufflePlanets() {
   const planetsToShuffle = document.querySelectorAll(".planet");
   let arrayOfPlanets = nodeList(planetsToShuffle);
   const gameSpace = document.querySelector("#gamespace");
-  let shuffledPlanets = shuffle(arrayOfPlanets);
-  for (let i = 0; i < shuffledPlanets.length; i++) {
-    [].forEach.call(shuffledPlanets, function (shuffledPlanet) {
+  let shufflePlanets = shuffle(arrayOfPlanets);
+  for (let i = 0; i < shufflePlanets.length; i++) {
+    [].forEach.call(shufflePlanets, function (shuffledPlanet) {
       gameSpace.appendChild(shuffledPlanet);
     });
   }
 }
-shuffledPlanets();
+shufflePlanets();
