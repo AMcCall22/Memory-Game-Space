@@ -2,7 +2,7 @@
 let firstCard = 0;
 let firstClick = true;
 let pairCount = 0;
-let k = 0;
+let clickCount = 0;
 
 //OnCardClicked Function
 //Replaces the facedown(rocket)image with the planet image
@@ -20,8 +20,8 @@ function onCardClicked(planet) {
   mySound.play();
 
   //Counter provides total number of clicks per game
-  k++;
-  document.getElementById("Counter").innerHTML = k;
+  clickCount++;
+  document.getElementById("Counter").innerHTML = clickCount;
 
   //Main Conditional
   //Checks logic to determine whether planet is first or second clicked
@@ -111,8 +111,8 @@ function reset() {
   document.getElementById("pairCounter").innerHTML = pairCount;
   firstCard = 0;
   firstClick = true;
-  k = 0;
-  document.getElementById("Counter").innerHTML = k;
+  clickCount = 0;
+  document.getElementById("Counter").innerHTML = clickCount;
   shuffledPlanets();
 }
 
