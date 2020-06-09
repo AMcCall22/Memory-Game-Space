@@ -5,9 +5,10 @@ let j = 0;
 let k = 0;
 
 //OnCardClicked Function
-//This replaces the facedown(rocket)image with the planet image
+//Replaces the facedown(rocket)image with the planet image
 //Onmousedown ="onCardClicked(event)" added to each planet div in index.html
-//Checks whether card is first or second clicked: storing first card or checking matching logic for second
+//Checks whether planet is first or second clicked
+//Stores first planet or checks matching logic for second planet
 function onCardClicked(planet) {
   let target = planet.currentTarget;
   target.className = target.className.replace("facedown", "");
@@ -23,9 +24,9 @@ function onCardClicked(planet) {
   document.getElementById("Counter").innerHTML = k;
 
   //Main Conditional
-  //Checks logic to determine whether card is first or second clicked
-  //Check for a match for each planet element, matching on "data-framework"
-  //Point to matched or unmatched function
+  //Checks logic to determine whether planet is first or second clicked
+  //Checks for a match for each planet image, matching on "data-framework"
+  //Points to matched or unmatched function
 
   if (firstClick === true) {
     firstCard = target;
@@ -50,7 +51,7 @@ function onCardClicked(planet) {
   //If data-framework matches on firstCard and target, add the matches class to each
   // A timeout of 1000ms is added to give sufficent time before the matched class appears
   //Disable/enable functions added around the timeout to prevent user clicking > 2 planets
-  //j counts the number of times a match is made
+  //j counts the number of times a match(pair) is made
   function matched() {
     disable();
     setTimeout(() => {
@@ -84,7 +85,7 @@ function onCardClicked(planet) {
 
   //Unmatched Function
   //If data-framework does not match,add the 'facedown' class to the planet
-  // A timeout of 1000ms is added to give sufficent time to view the position of images
+  //Add a timeout of 1000ms to give sufficent time to view the position of images
   function unmatched() {
     disable();
     setTimeout(() => {
@@ -116,7 +117,7 @@ function reset() {
 }
 
 //End Modal
-//This is called when a player completes the game and finds 8 pairs
+//Call function when a player completes the game and finds 8 pairs
 //Audio is added when modal is triggered
 //Close button on modal also calls the reset function
 function endModal() {
@@ -136,9 +137,9 @@ function endModal() {
 }
 
 //Start modal
-//This is called whent the webpage is loaded
+//Call function when webpage is loaded
 //Close button functionality added
-//Enable class added following the closure of the modal to allow play to commence
+//Enable class added following modal closure to allow play to commence
 function startModal() {
   let gameModal = document.getElementById("startGameModal");
   gameModal.classList.add("modalshow");
@@ -160,10 +161,10 @@ function nodeList(deck) {
   }
   return arr.slice();
 }
+
 //Shuffle Function
-//Shuffle function utilises the Fisher-Yates method
-//This allows for random placing of planets within divs in the gamespace.
-//Logic obtained from StackOverflow.
+//Shuffle function utilises the Fisher-Yates method(further detail in README)
+//Allows random placing of planets within divs in the gamespace
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
@@ -171,11 +172,12 @@ function shuffle(array) {
   }
   return array;
 }
+
 //Shuffled Planets Function
-//Collects all planets
-//Converts to an array
-//Calls Shuffle function
-//Once shuffle is complete, planets are appended randomly back into the game
+//Collects all planets for shuffle function
+//Calls shuffle function
+//Once shuffle is complete, append planets back into the game
+//Logic borrowed and amended - https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
 function shuffledPlanets() {
   const planetsToShuffle = document.querySelectorAll(".planet");
   let arrayOfPlanets = nodeList(planetsToShuffle);
