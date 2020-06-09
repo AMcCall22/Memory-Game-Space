@@ -1,39 +1,251 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+## **# Alison McCallum - Space Memory Game**
 
-Welcome AMcCall22,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
 
-## Gitpod Reminders
+### **#### Milestone 2 - Interactive Front End Development** 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+I have chosen to create a memory card came based on the planets of our solar system.  My 4 year old son is currently obsessed with Space and I wanted to create an enjoyable, relevant game for him and his friends.
 
-`python3 -m http.server`
+The game is based on a simple memory game of matching 8 pairs of planets images to win.  The game can be played over and over again, providing the player the chance to reduce the number of 'clicks' it takes them to find all 8 pairs.
 
-A blue button should appear to click: *Make Public*,
+**#### Mock Up images**
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: *Make Public*,
+**## UX**
 
-Another blue button should appear to click: *Open Browser*.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
 
-## Updates Since The Instructional Video
+**#### User Stories**
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+"As a **parent** of young children, I would like to see the following:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- A clear and intuitive design that is easy for my child to follow
+- Clear instructions as to how to play the game and also how the game ends
+- A method to restart the game if necessary
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
---------
 
-Happy coding!
+"As a **young child** (around 4-8 years old), I would like to see the following:
+
+- A fun concept which provides an element of competition 
+
+- A game I can play over and over again
+- A clear and intuitive design that is easy for to follow
+- Clear instructions as to how to play the game and also how the game ends
+- A method to restart the game if necessary
+
+
+
+**#### Wireframes**
+
+
+
+Link to [Wireframes](/Wireframes/Space_Memory_Gamepdf)
+
+
+
+**## Features**
+
+
+
+The game is played on 1 screen which includes the following features:
+
+***\* A start-game modal \****
+
+- The start modal appears on loading the webpage of the game.
+
+- It provides instructions as to how to play the game.
+
+- Once the 'close' button is clicked, the game can begin.
+
+  
+
+***\* The 'Gamespace' with 16 cards \****
+
+- There are 8 planets in the solar system which provide the images for the 16 cards available for play.
+- The starting position of the cards is a facedown image (yellow with a rocket).  
+- Once a card is clicked, a short audio sound plays and the image of the planet is revealed.
+- Once a second card is clicked, the audio is played and the image is revealed.  
+- Matching logic is called and if the images match, a blue starry background is revealed to demonstrate this.
+- If the images do not match, the facedown images reappears on the cards.
+
+
+
+***\*A 'Pairs' counter\****
+
+- This counter records the number of pairs matched, up to a maximum of 8.
+- This resets once the restart button has been clicked or the 'end modal' appears on screen.
+
+
+
+***\*A 'Clicks' counter\****
+
+- This counter records the number clicks that have taken place on the cards throughout the game.  It introduces an element of competitiveness as the player can try to 'beat' the number of clicks that it takes them to find all 8 matches.
+- This resets once the restart button has been clicked or the 'End Modal' appears on screen.
+
+
+
+***\* A restart button\****
+
+- This button resets the game at any point, resetting both the 'Pairs' and 'Clicks' counter , allowing a new game to start.****
+
+
+
+***\* An end-game modal \****
+
+- The 'end modal' appears once 8 matches have been found and signifies the end of the game.
+- The modal provides a congratulatory message with instructions as to how to play again.
+- Once the 'close' button has been clicked, the reset logic (as per the restart button) is called. The game and counters are reset. 
+
+
+
+**##Features for future implementation**
+
+- A second level with more cards will create a more complex game and appeal to a wider audience. 
+- Currently, the game has a pairs counter and a click counter.  A  further enhancement would be a mechanism for logging a high score to encourage repeat players.
+- Further audio could be added to improve the overall player experience. This could include background music as well as other audio clips on the close button etc. 
+- 
+
+**## Technologies Used** 
+
+\- HTML
+
+\- CSS
+
+\- Javascript
+
+\- Bootstrap 4
+
+\- Balsamiq
+
+\- Github/Gitpod
+
+\- Font Awesome
+
+\- Google Fonts
+
+\- Unicorn Revealer (https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln)
+
+
+
+**### Issues faced and resolved**
+
+- There was a dealy on the audio sound on clicking the planets.  This was resolved....
+- Media queries were added in to compensate for any issues faced on mobile view.  These mainly include dthe planet div height max-widht, as well as the modal sizes.
+- The hover class added to the planet div became 'sticky' on mobile screens.  To compensate, a media query with a white border was added  which resolved the issue
+
+
+
+**## Deployment**
+
+
+
+The GitHub repository for this site is located [here](https://github.com/AMcCall22/online-profile).
+
+
+
+In order to deploy my site to GitHub Pages the following steps were taken:
+
+
+
+\1. From the menu items near the top of the page, select ***\*Settings\****.
+
+\2. Scroll down to the ***\*GitHub Pages\**** section.
+
+\3. Under ***\*Source\**** click the drop-down menu labelled ***\*None\**** and select ***\*Master Branch\****.
+
+\4. On selecting Master Branch the page is automatically refreshed and the website is now deployed.
+
+\5. Scroll back down to the ***\*GitHub Pages\**** section to retrieve the link to the deployed website.
+
+
+
+Deployed website - 
+
+
+
+To ***\*clone\**** this project from Github, please follow the steps below:
+
+
+
+\1. Navigate to the correct repository - [here](https://github.com/AMcCall22/online-profile).
+
+\2. Click the green button - 'Clone or Download'.
+
+\3. Copy the clone URL that appears (https://github.com/AMcCall22/online-profile.git)
+
+\4. Change the current working directory to the location where you want the cloned directory to be made.
+
+\5. Type 'git clone' and paste the URL you copied in Step 3.
+
+\6. Press Enter to created your local clone.
+
+
+
+
+
+**## Credits**
+
+
+
+**### Content**
+
+Memory Game coding inspiration
+
+https://www.youtube.com/watch?v=bbb9dZotsOc
+
+https://marina-ferreira.github.io/tutorials/js/memory-game/
+
+https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
+
+https://codeburst.io/how-to-make-a-dragon-ball-memory-game-part-2-5659ff2ee0b9
+
+**#General**
+
+https://www.w3schools.com/
+
+https://css-tricks.com/considerations-styling-modal/
+
+
+
+**### Media**
+
+**#Images**
+
+- Yellow Rocket - https://pixabay.com/illustrations/rocket-space-spaceman-2887845/  Image by <a href="https://pixabay.com/users/JPhillips4-6689100/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2887845">JPhillips4</a> 
+- Blue Stars - https://www.kindpng.com/free/white-star/ 
+- Planet Images - https://images.nasa.gov/
+
+
+
+**#Audio**
+
+- bing.wav - http://soundbible.com/1636-Power-Up-Ray.html 
+- drip.wav - https://www.audiomicro.com/free-sound-effects/free-cartoons-and-comic-effects/sort:Track.length/direction:asc 
+
+
+
+**### Acknowledgements**
+
+
+
+Thanks to my Mentor Brian Macharia for his input and direction.
+
+
+
+Thanks also to my husband, Peter McCallum for his support and patience throughout this project. 
+
+
+
+\------
+
+
+
+Disclaimer
+
+
+
+This site is currently for educational and personal use only.

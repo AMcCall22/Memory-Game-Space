@@ -146,14 +146,14 @@ function startModal() {
     let closeButton = document.querySelector("#start-close-button");
     closeButton.addEventListener("click", function() {
         gameModal.classList.toggle("closed");
-        let gameSpaceEnable = document.getElementById("gamespace");
+        let gameSpaceEnable = document.getElementById("gameSpace");
         gameSpaceEnable.classList.add("enabled");
     });
 }
 startModal();
 
 //Nodelist of planets converts into array to allow shuffle to take place
-let deck = gamespace.getElementsByClassName(".planet");
+let deck = gameSpace.getElementsByClassName(".planet");
 
 function nodeList(deck) {
     let arr = [];
@@ -182,7 +182,7 @@ function shuffle(array) {
 function shufflePlanets() {
     const planetsToShuffle = document.querySelectorAll(".planet");
     let arrayOfPlanets = nodeList(planetsToShuffle);
-    const gameSpace = document.querySelector("#gamespace");
+    const gameSpace = document.querySelector("#gameSpace");
     let shufflePlanets = shuffle(arrayOfPlanets);
     for (let i = 0; i < shufflePlanets.length; i++) {
         [].forEach.call(shufflePlanets, function(shuffledPlanet) {

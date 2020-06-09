@@ -3,7 +3,7 @@
 /*-------------------------------------------------------------------------body*/
 body {
   padding: 0rem;
-  font-family: "Balsamiq Sans", cursive;
+  font-family: "Balsamiq Sans", sans-serif;
   background-color: #47ebbe;
 }
 /*-------------------------------------------------------------------------header*/
@@ -63,13 +63,13 @@ body {
 }
 
 /*-------------------------------------------------------------------------planets*/
-#gamespace {
+#gameSpace {
   background-color: #47ebbe;
 }
 
 .planet {
   height: 8rem;
-  max-width: 15rem;
+  max-width: 14rem;
   border: #ffffff solid 0.2rem;
   border-radius: 0.625rem;
   background-size: contain;
@@ -130,7 +130,7 @@ body {
   background-size: contain;
   background-color: #ebbe47;
   height: 8rem;
-  max-width: 15rem;
+  max-width: 14rem;
   border: #ffffff solid 0.2rem;
   border-radius: 0.625rem;
   background-position: center center;
@@ -283,7 +283,7 @@ body {
   }
   .planet {
     height: 8rem;
-    max-width: 15rem;
+    max-width: 14rem;
   }
 }
 
