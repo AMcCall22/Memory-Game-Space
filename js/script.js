@@ -6,8 +6,8 @@ let k = 0;
 
 //OnCardClicked Function
 //This replaces the facedown(rocket)image with the planet image
-//onmousedown ="onCardClicked(event)" added to each planet div in index.html
-//Reassign target to the planet just clicked
+//Onmousedown ="onCardClicked(event)" added to each planet div in index.html
+//Checks whether card is first or second clicked: storing first card or checking matching logic for second
 function onCardClicked(planet) {
   let target = planet.currentTarget;
   target.className = target.className.replace("facedown", "");
@@ -22,7 +22,8 @@ function onCardClicked(planet) {
   k++;
   document.getElementById("Counter").innerHTML = k;
 
-  //Match Function
+  //Main Conditional
+  //Checks logic to determine whether card is first or second clicked
   //Check for a match for each planet element, matching on "data-framework"
   //Point to matched or unmatched function
 
@@ -152,7 +153,6 @@ startModal();
 
 //Nodelist of planets converts into array to allow shuffle to take place
 let deck = gamespace.getElementsByClassName(".planet");
-
 function nodeList(deck) {
   let arr = [];
   for (let planet of deck) {
@@ -172,7 +172,10 @@ function shuffle(array) {
   return array;
 }
 //Shuffled Planets Function
-//Once shuffle is complete, planets are displayed randomly
+//Collects all planets
+//Converts to an array
+//Calls Shuffle function
+//Once shuffle is complete, planets are appended randomly back into the game
 function shuffledPlanets() {
   const planetsToShuffle = document.querySelectorAll(".planet");
   let arrayOfPlanets = nodeList(planetsToShuffle);
