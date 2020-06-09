@@ -10,7 +10,7 @@ The game is based on a simple memory game of matching 8 pairs of planets images 
 
 #### **Mock Up images**
 
-![image-20200607160236156](C:\Users\aliso\AppData\Roaming\Typora\typora-user-images\image-20200607160236156.png)
+
 
 #### **UX**
 
@@ -105,9 +105,12 @@ The game is played on 1 screen which includes the following features:
 #### **Features for future implementation**
 
 - A second level with more cards will create a more complex game and appeal to a wider audience. 
+
 - Currently, the game has a pairs counter and a click counter.  A  further enhancement would be a mechanism for logging a high score to encourage repeat players.
+
 - Further audio could be added to improve the overall player experience. This could include background music as well as other audio clips on the close button etc. 
-- 
+
+  
 
 **Technologies Used** 
 
@@ -143,7 +146,7 @@ The game is played on 1 screen which includes the following features:
 
 
 
-The GitHub repository for this site is located [here](https://github.com/AMcCall22/online-profile).
+The GitHub repository for this site is located [here](https://github.com/AMcCall22/Memory-Game-Space).
 
 
 
@@ -151,15 +154,15 @@ In order to deploy my site to GitHub Pages the following steps were taken:
 
 
 
-\1. From the menu items near the top of the page, select ***\*Settings\****.
+1. From the menu items near the top of the page, select ***\*Settings\****.
 
-\2. Scroll down to the ***\*GitHub Pages\**** section.
+2. Scroll down to the ***\*GitHub Pages\**** section.
 
-\3. Under ***\*Source\**** click the drop-down menu labelled ***\*None\**** and select ***\*Master Branch\****.
+3. Under ***\*Source\**** click the drop-down menu labelled ***\*None\**** and select ***\*Master Branch\****.
 
-\4. On selecting Master Branch the page is automatically refreshed and the website is now deployed.
+4. On selecting Master Branch the page is automatically refreshed and the website is now deployed.
 
-\5. Scroll back down to the ***\*GitHub Pages\**** section to retrieve the link to the deployed website.
+5. Scroll back down to the ***\*GitHub Pages\**** section to retrieve the link to the deployed website.
 
 
 
@@ -171,19 +174,17 @@ To ***\*clone\**** this project from Github, please follow the steps below:
 
 
 
-\1. Navigate to the correct repository - [here](https://github.com/AMcCall22/online-profile).
+1. Navigate to the correct repository - [here](https://github.com/AMcCall22/Memory-Game-Space).
 
-\2. Click the green button - 'Clone or Download'.
+2. Click the green button - 'Clone or Download'.
 
-\3. Copy the clone URL that appears (https://github.com/AMcCall22/online-profile.git)
+3. Copy the clone URL that appears https://amccall22.github.io/Memory-Game-Space/.
 
-https://amccall22.github.io/Memory-Game-Space/.
+4. Change the current working directory to the location where you want the cloned directory to be made.
 
-\4. Change the current working directory to the location where you want the cloned directory to be made.
+5. Type 'git clone' and paste the URL you copied in Step 3.
 
-\5. Type 'git clone' and paste the URL you copied in Step 3.
-
-\6. Press Enter to created your local clone.
+6. Press Enter to created your local clone.
 
 
 
