@@ -76,7 +76,6 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
-  background-color: black;
   margin: 0.2rem;
 }
 
@@ -94,34 +93,42 @@ body {
 /*-------------------------------------------------------------------------planets*/
 .earth {
   background-image: url("../images/planets/earth.jpg");
+background-color: black;
 }
 
 .jupiter {
   background-image: url("../images/planets/jupiter.png");
+background-color: black;
 }
 
 .mars {
   background-image: url("../images/planets/mars.jpg");
+background-color: black;
 }
 
 .mercury {
   background-image: url("../images/planets/mercury.jpg");
+background-color: black;
 }
 
 .neptune {
   background-image: url("../images/planets/neptune.jpg");
+background-color: black;
 }
 
 .saturn {
   background-image: url("../images/planets/saturn.jpg");
+background-color: black;
 }
 
 .uranus {
   background-image: url("../images/planets/uranus.jpg");
+background-color: black;
 }
 
 .venus {
   background-image: url("../images/planets/venus.jpg");
+background-color: black;
 }
 
 /*-------------------------------------------------------------------------facedown/matches*/
