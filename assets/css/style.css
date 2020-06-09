@@ -77,6 +77,9 @@ body {
   background-repeat: no-repeat;
   cursor: pointer;
   margin: 0.2rem;
+
+
+
 }
 
 .disabled {
@@ -92,43 +95,36 @@ body {
 }
 /*-------------------------------------------------------------------------planets*/
 .earth {
-  background-image: url("../images/planets/earth.jpg");
-background-color: black;
+background: #000000 url("../images/planets/earth.jpg");
 }
 
 .jupiter {
-  background-image: url("../images/planets/jupiter.png");
-background-color: black;
+  background: 	#000000 url("../images/planets/jupiter.png");
 }
 
 .mars {
-  background-image: url("../images/planets/mars.jpg");
-background-color: black;
+  background: 	#000000 url("../images/planets/mars.jpg");
 }
 
 .mercury {
-  background-image: url("../images/planets/mercury.jpg");
-background-color: black;
+  background:	#000000 url("../images/planets/mercury.jpg");
 }
 
 .neptune {
-  background-image: url("../images/planets/neptune.jpg");
-background-color: black;
+  background:	#000000 url("../images/planets/neptune.jpg");
 }
 
 .saturn {
-  background-image: url("../images/planets/saturn.jpg");
-background-color: black;
+  background:	#000000 url("../images/planets/saturn.jpg");
+
 }
 
 .uranus {
-  background-image: url("../images/planets/uranus.jpg");
-background-color: black;
+  background:	#000000 url("../images/planets/uranus.jpg");
 }
 
 .venus {
-  background-image: url("../images/planets/venus.jpg");
-background-color: black;
+  background:	#000000 url("../images/planets/venus.jpg");
 }
 
 /*-------------------------------------------------------------------------facedown/matches*/

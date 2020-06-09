@@ -15,8 +15,8 @@ function onCardClicked(planet) {
 
     //Add audio when planet is clicked
     const mySound = document.getElementById("sound");
-    document.querySelector("planet");
     mySound.currentTime = 0;
+    document.querySelector("planet");
     mySound.play();
 
     //Counter provides total number of clicks per game
