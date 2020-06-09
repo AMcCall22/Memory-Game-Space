@@ -1,7 +1,7 @@
 //Initialise variables
 let firstCard = 0;
 let firstClick = true;
-let j = 0;
+let pairCount = 0;
 let k = 0;
 
 //OnCardClicked Function
@@ -38,7 +38,7 @@ function onCardClicked(planet) {
       target.getAttribute("data-framework")
     ) {
       matched();
-      if (j > 6) {
+      if (pairCount > 6) {
         endModal();
       }
     } else {
@@ -51,15 +51,15 @@ function onCardClicked(planet) {
   //If data-framework matches on firstCard and target, add the matches class to each
   // A timeout of 1000ms is added to give sufficent time before the matched class appears
   //Disable/enable functions added around the timeout to prevent user clicking > 2 planets
-  //j counts the number of times a match(pair) is made
+  //PairCount counts the number of times a match(pair) is made
   function matched() {
     disable();
     setTimeout(() => {
       firstCard.classList.add("matches");
       target.classList.add("matches");
       enable();
-      j++;
-      document.getElementById("pairCounter").innerHTML = j;
+      pairCount++;
+      document.getElementById("pairCounter").innerHTML = pairCount;
     }, 1000);
   }
 
@@ -107,8 +107,8 @@ function reset() {
     planetContainer[i].classList.add("facedown");
     planetContainer[i].classList.remove("disabled");
   }
-  j = 0;
-  document.getElementById("pairCounter").innerHTML = j;
+  pairCount = 0;
+  document.getElementById("pairCounter").innerHTML = pairCount;
   firstCard = 0;
   firstClick = true;
   k = 0;
