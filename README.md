@@ -11,7 +11,7 @@ The game is based on a simple memory game of matching 8 pairs of planets images 
 
 #### **Mock Up images**
 
-![/README_Images/Mock_Up.PNG]()
+![README_Images/Mock_Up.png]()
 
 #### **UX**
 
@@ -138,9 +138,8 @@ Please find a seperate file detailing the testing undertaken here :
 
 Link to [Testing](/Testing.md)
 
-#### **Issues faced and resolved**
+#### **Main Issues faced and resolved**
 
-- There was a dealy on the audio sound on clicking the planets.  This was resolved....
 - Media queries were added in to compensate for any issues faced on mobile view.  These mainly include the planet div height max-width, as well as the modal sizes.
 - The hover class added to the planet div became 'sticky' on mobile screens.  To compensate, a media query with a white border was added  which resolved the issue
 - The background image with background colour on mobile view was delayed on loading.  This proved complex to resolve, and the end result is the loading of the images within the start modal without being displayed. This acts as a 'preload' and has resolved the issue.
