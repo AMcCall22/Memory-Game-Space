@@ -10,7 +10,7 @@ The game is based on a simple memory game of matching 8 pairs of planets images 
 
 #### **Mock Up images**
 
-
+![](/README_Images/Mock_Up.png)
 
 #### **UX**
 
@@ -112,7 +112,7 @@ The game is played on 1 screen which includes the following features:
 
   
 
-**Technologies Used** 
+#### Technologies Used 
 
 \- HTML
 
@@ -132,9 +132,13 @@ The game is played on 1 screen which includes the following features:
 
 \- Unicorn Revealer (https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln)
 
+#### Testing
 
+Please find a seperate file detailing the testing undertaken here :
 
-**Issues faced and resolved**
+Link to [Testing](/Testing.md)
+
+#### **Issues faced and resolved**
 
 - There was a dealy on the audio sound on clicking the planets.  This was resolved....
 - Media queries were added in to compensate for any issues faced on mobile view.  These mainly include the planet div height max-width, as well as the modal sizes.
@@ -143,7 +147,7 @@ The game is played on 1 screen which includes the following features:
 
 
 
-**Deployment**
+#### **Deployment**
 
 
 
