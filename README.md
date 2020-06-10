@@ -4,7 +4,7 @@
 
 ### **Milestone 2 - Interactive Front End Development** 
 
-I have chosen to create a memory card came based on the planets of our solar system.  My 4 year old son is currently obsessed with Space and I wanted to create an enjoyable, relevant game for him and his friends.
+I have chosen to create a memory card game based on the planets of our solar system.  My 4 year old son is currently obsessed with Space and I wanted to create an enjoyable, relevant game for him and his friends.
 
 The game is based on a simple memory game of matching 8 pairs of planets images to win.  The game can be played over and over again, providing the player the chance to reduce the number of 'clicks' it takes them to find all 8 pairs.
 
@@ -134,7 +134,7 @@ The game is played on 1 screen which includes the following features:
 
 #### Testing
 
-Please find a seperate file detailing the testing undertaken here :
+Please find a seperate file detailing the testing undertaken here:
 
 Link to [Testing](/Testing.md)
 

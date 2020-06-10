@@ -4,123 +4,123 @@
 
 
 
-1. #### Start-game modal
+#### Start-game modal
 
-2. ###### Test Description 
+###### Test Description 
 
-3. Ensure correct loading of modal and correct game initiation.
+Ensure correct loading of modal and correct game initiation.
 
-4. ###### Expected Outcome 
+###### Expected Outcome 
 
-5. Modal appears on loading the webpage of the game.  Once the 'close' button is clicked, the game begins.
+Modal appears on loading the webpage of the game.  Once the 'close' button is clicked, the game begins.
 
-6. ###### Pass/Fail
+###### Pass/Fail
 
-7. Pass
+Pass
 
-8. 
 
-9. #### Gamespace
 
-10. ###### Test Description 
+#### Gamespace
 
-11. Ensure Gamespace loads correctly for game to be played.
+###### Test Description 
 
-12. ###### Expected Outcome 
+Ensure Gamespace loads correctly for game to be played.
 
-13. The starting position of the cards is a facedown image. 
+###### Expected Outcome 
 
-14. On each card click, a short audio sound plays and the image of the planet is revealed.  
+The starting position of the cards is a facedown image. 
 
-15. Matching logic is called and if the images match, a blue starry background is revealed to demonstrate this.
+On each card click, a short audio sound plays and the image of the planet is revealed.  
 
-16. Only 2 cards can be clicked before matching checks are made.
+Matching logic is called and if the images match, a blue starry background is revealed to demonstrate this.
 
-17. If the images do not match, the facedown images reappears on the cards.
+Only 2 cards can be clicked before matching checks are made.
 
-18. ###### Pass/Fail 
+If the images do not match, the facedown images reappears on the cards.
 
-19. Pass
+###### Pass/Fail 
 
-20. 
+Pass
 
-21. #### Pairs counter
+ 
 
-22. ###### Test Description 
+#### Pairs counter
 
-23. Ensure correct counting of card matches made.
+###### Test Description 
 
-24. ###### Expected Outcome 
+Ensure correct counting of card matches made.
 
-25. Correctly record the number of pairs matched, up to a maximum of 8.
+###### Expected Outcome 
 
-26. Counter resets once the restart button has been clicked or the 'end modal' appears on screen.
+Correctly record the number of pairs matched, up to a maximum of 8.
 
-27. ###### Pass/Fail
+Counter resets once the restart button has been clicked or the 'end modal' appears on screen.
 
-28. Pass
+###### Pass/Fail
 
-29. 
+Pass
 
-30. #### Clicks counter
 
-31. ###### Test Description 
 
-32. Ensure correct counting of clicks made.
+#### Clicks counter
 
-33. ###### Expected Outcome 
+###### Test Description 
 
-34. Correctly record the number of card clicks made throughout the game.
+Ensure correct counting of clicks made.
 
-35. Counter resets once the restart button has been clicked or the 'end modal' appears on screen.
+###### Expected Outcome 
 
-36. ###### Pass/Fail
+Correctly record the number of card clicks made throughout the game.
 
-37. Pass
+Counter resets once the restart button has been clicked or the 'end modal' appears on screen.
 
-38. 
+###### Pass/Fail
 
-39. #### Restart button
+Pass
 
-40. ###### Test Description 
 
-41. Ensure restart button is functioning correctly
 
-42. ###### Expected Outcome 
+#### Restart button
 
-43. Resets the game at any point by clicking i.e all cards to return to 'facedown' position.
+###### Test Description 
 
-44. Reset both the 'Pairs' and 'Clicks' counter , allowing a new game to start.
+Ensure restart button is functioning correctly
 
-45. ###### Pass/Fail
+###### Expected Outcome 
 
-46. Pass
+Resets the game at any point by clicking i.e all cards to return to 'facedown' position.
 
-47. 
+Reset both the 'Pairs' and 'Clicks' counter, allowing a new game to start.
 
-48. #### End-game modal
+###### Pass/Fail
 
-49. ###### Test Description 
+Pass
 
-50. Ensure correct loading of modal and correct game completion.
+ 
 
-51. ###### Expected Outcome 
+#### End-game modal
 
-52. Modal triggers once 8 matches have been found.
+###### Test Description 
 
-53. Audio plays on modal trigger.
+Ensure correct loading of modal and correct game completion.
 
-54. Once the 'close' button has been clicked, the reset logic (as per the restart button) is called. The game and counters are reset. 
+###### Expected Outcome 
 
-55. ###### Pass/Fail
+Modal triggers once 8 matches have been found.
 
-56. Pass
+Audio plays on modal trigger.
 
-57. 
+Once the 'close' button has been clicked, the reset logic (as per the restart button) is called. The game and counters are reset. 
+
+###### Pass/Fail
+
+Pass
+
+
 
 ### Browser compatibility
 
-- 
+
 
 Ensure that the site loads correctly on each of the following web browsers
 
