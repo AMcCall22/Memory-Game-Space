@@ -1,229 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet preload"
-      as="style"
-      href="assets/css/style.css"
-      type="text/css"
-    />
-    <title>Space Memory</title>
-  </head>
-
-  <body>
-    <!-- Start of Game Modal -->
-    <div class="modal modal-lg" id="startGameModal" tabindex="-1" role="dialog">
-      <div class="modal-content-start">
-        <button class="close-button-start" id="start-close-button">
-          &times;
-        </button>
-        <h4>Planet Memory Game</h4>
-        <h4>How to Play:</h4>
-        <p>
-          Click on a card and then select a second card. If you select a matched
-          pair, the cards will turn blue. If you select an unmatched pair, they
-          will flip back over to yellow.
-        </p>
-        <p>
-          Once you have found 8 pairs, the game ends. Select the restart button
-          at any time to start again.
-        </p>
-        <p>
-          <i class="fas fa-rocket"></i> Enjoy!
-          <i class="fas fa-rocket" aria-hidden="true"></i>
-        </p>
-
-        <!-- Small Planet divs added to pre-load images before game starts -->
-        <div class="row no-gutters">
-          <div class="col-3 small-planet jupiter"></div>
-          <div class="col-3 small-planet saturn"></div>
-          <div class="col-3 small-planet neptune"></div>
-          <div class="col-3 small-planet uranus"></div>
-          <div class="col-3 small-planet mars"></div>
-          <div class="col-3 small-planet earth"></div>
-          <div class="col-3 small-planet venus"></div>
-          <div class="col-3 small-planet mercury"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Header -->
-    <header>
-      <div class="row no-gutters heading-home">
-        <div class="col-12">
-          <h1 class="page-title">Space Memory Game</h1>
-          <h2 class="title">Planets</h2>
-        </div>
-      </div>
-    </header>
-
-    <!-- Main Game Area-->
-    <section id="game">
-      <div class="allplanets container">
-        <div class="row no-gutters buttons">
-          <div class="col-6 counter">
-            <p class="pairs-counter">Pairs: <span id="pairCounter">0</span></p>
-          </div>
-          <div class="col-6 counter">
-            <p class="pairs-counter">Clicks: <span id="Counter">0</span></p>
-          </div>
-        </div>
-        <div class="row no-gutters buttons">
-          <div class="col-12 restart">
-            <div
-              id="restartButton"
-              onmousedown="reset()"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              title="Restart"
-            >
-              <i class="fas fa-redo" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Planets-->
-        <audio id="sound" preload="auto">
-          <source src="assets/sounds/drip.wav" />
-        </audio>
-        <div
-          class="row no-gutters justify-content-center disabled"
-          id="gameSpace"
-        >
-          <div
-            class="col-3 jupiter planet facedown"
-            data-framework="jupiter-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 jupiter planet facedown"
-            data-framework="jupiter-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 uranus planet facedown"
-            data-framework="uranus-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 uranus planet facedown"
-            data-framework="uranus-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 saturn planet facedown"
-            data-framework="saturn-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 saturn planet facedown"
-            data-framework="saturn-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 neptune planet facedown"
-            data-framework="neptune-card "
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 neptune planet facedown"
-            data-framework="neptune-card "
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 mercury planet facedown"
-            data-framework="mercury-card "
-            onmousedown="onCardClicked(event)"
-            id="preload-08"
-          ></div>
-          <div
-            class="col-3 mercury planet facedown"
-            data-framework="mercury-card "
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 earth planet facedown"
-            data-framework="earth-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 earth planet facedown"
-            data-framework="earth-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 mars planet facedown"
-            data-framework="mars-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 mars planet facedown"
-            data-framework="mars-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 venus planet facedown"
-            data-framework="venus-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-          <div
-            class="col-3 venus planet facedown"
-            data-framework="venus-card"
-            onmousedown="onCardClicked(event)"
-          ></div>
-        </div>
-      </div>
-
-      <!-- End of Game Modal -->
-      <div class="modal modal-lg" id="endGameModal" role="dialog">
-        <audio id="endsound">
-          <source src="assets/sounds/bing.wav" />
-        </audio>
-        <div class="modal-content-end">
-          <button class="close-button-end" id="end-close-button">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link
+         rel="stylesheet"
+         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+         crossorigin="anonymous"
+         />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+         type="text/css"
+         />
+      <link
+         rel="stylesheet preload"
+         as="style"
+         href="assets/css/style.css"
+         type="text/css"
+         />
+      <title>Space Memory</title>
+   </head>
+   <body>
+      <!-- Start of Game Modal -->
+      <div class="modal modal-lg" id="startGameModal" tabindex="-1" role="dialog">
+         <div class="modal-content-start">
+            <button class="close-button-start" id="start-close-button">
             &times;
-          </button>
-          <h2>Well done!</h2>
-          <h3>You have completed the memory game!</h3>
-          <p>
-            Click the restart button if you want to play again to beat your
-            'Clicks' score!
-          </p>
-        </div>
+            </button>
+            <h4>Planet Memory Game</h4>
+            <h4>How to Play:</h4>
+            <p>
+               Click on a card and then select a second card. If you select a matched
+               pair, the cards will turn blue. If you select an unmatched pair, they
+               will flip back over to yellow.
+            </p>
+            <p>
+               Once you have found 8 pairs, the game ends. Select the restart button
+               at any time to start again.
+            </p>
+            <p>
+               <i class="fas fa-rocket"></i> Enjoy!
+               <i class="fas fa-rocket" aria-hidden="true"></i>
+            </p>
+            <!-- Small Planet divs added to pre-load images before game starts -->
+            <div class="row no-gutters">
+               <div class="col-3 small-planet jupiter"></div>
+               <div class="col-3 small-planet saturn"></div>
+               <div class="col-3 small-planet neptune"></div>
+               <div class="col-3 small-planet uranus"></div>
+               <div class="col-3 small-planet mars"></div>
+               <div class="col-3 small-planet earth"></div>
+               <div class="col-3 small-planet venus"></div>
+               <div class="col-3 small-planet mercury"></div>
+            </div>
+         </div>
       </div>
-    </section>
-
-    <!-- Scripts -->
-    <script src="js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <!-- Header -->
+      <header>
+         <div class="row no-gutters heading-home">
+            <div class="col-12">
+               <h1 class="page-title">Space Memory Game</h1>
+               <h2 class="title">Planets</h2>
+            </div>
+         </div>
+      </header>
+      <!-- Main Game Area-->
+      <section id="game">
+         <div class="allplanets container">
+            <div class="row no-gutters buttons">
+               <div class="col-6 counter">
+                  <p class="pairs-counter">Pairs: <span id="pairCounter">0</span></p>
+               </div>
+               <div class="col-6 counter">
+                  <p class="pairs-counter">Clicks: <span id="Counter">0</span></p>
+               </div>
+            </div>
+            <div class="row no-gutters buttons">
+               <div class="col-12 restart">
+                  <div
+                     id="restartButton"
+                     onmousedown="reset()"
+                     data-toggle="tooltip"
+                     data-placement="bottom"
+                     title="Restart"
+                     >
+                     <i class="fas fa-redo" aria-hidden="true"></i>
+                  </div>
+               </div>
+            </div>
+            <!-- Planets-->
+            <audio id="sound" preload="auto">
+               <source src="assets/sounds/drip.wav" />
+            </audio>
+            <div
+               class="row no-gutters justify-content-center disabled"
+               id="gameSpace"
+               >
+               <div
+                  class="col-3 jupiter planet facedown"
+                  data-framework="jupiter-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 jupiter planet facedown"
+                  data-framework="jupiter-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 uranus planet facedown"
+                  data-framework="uranus-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 uranus planet facedown"
+                  data-framework="uranus-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 saturn planet facedown"
+                  data-framework="saturn-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 saturn planet facedown"
+                  data-framework="saturn-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 neptune planet facedown"
+                  data-framework="neptune-card "
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 neptune planet facedown"
+                  data-framework="neptune-card "
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 mercury planet facedown"
+                  data-framework="mercury-card "
+                  onmousedown="onCardClicked(event)"
+                  id="preload-08"
+                  ></div>
+               <div
+                  class="col-3 mercury planet facedown"
+                  data-framework="mercury-card "
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 earth planet facedown"
+                  data-framework="earth-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 earth planet facedown"
+                  data-framework="earth-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 mars planet facedown"
+                  data-framework="mars-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 mars planet facedown"
+                  data-framework="mars-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 venus planet facedown"
+                  data-framework="venus-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+               <div
+                  class="col-3 venus planet facedown"
+                  data-framework="venus-card"
+                  onmousedown="onCardClicked(event)"
+                  ></div>
+            </div>
+         </div>
+         <!-- End of Game Modal -->
+         <div class="modal modal-lg" id="endGameModal" role="dialog">
+            <audio id="endsound">
+               <source src="assets/sounds/bing.wav" />
+            </audio>
+            <div class="modal-content-end">
+               <button class="close-button-end" id="end-close-button">
+               &times;
+               </button>
+               <h2>Well done!</h2>
+               <h3>You have completed the memory game!</h3>
+               <p>
+                  Click the restart button if you want to play again to beat your
+                  'Clicks' score!
+               </p>
+            </div>
+         </div>
+      </section>
+      <!-- Scripts -->
+      <script src="js/script.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script
+         src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+         crossorigin="anonymous"
+         ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+         crossorigin="anonymous"
+         ></script>
+      <script
+         src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+         crossorigin="anonymous"
+         ></script>
+   </body>
 </html>

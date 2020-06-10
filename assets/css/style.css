@@ -157,6 +157,7 @@ body {
   width: 25rem;
   max-width: 100%;
 }
+
 .modal-content-start,
 .modal-content-end {
   color: #ffffff;
@@ -171,6 +172,7 @@ body {
   animation-name: slideIn;
   animation-duration: 0.4s;
 }
+
 .modal-content-start {
   background-color: #4774eb;
 }
@@ -239,6 +241,7 @@ body {
     top: 50%;
     left: 50%;
   }
+
   .planet,
   .facedown {
     height: 5rem;
@@ -248,9 +251,11 @@ body {
   .page-title {
     font-size: 2rem;
   }
+
   .game-title {
     font-size: 1.5rem;
   }
+
   .counter {
     font-size: 1rem;
     height: 2rem;
@@ -274,6 +279,7 @@ body {
   .facedown {
     max-width: 4rem;
   }
+
   .modal {
     height: 31.25rem;
     max-height: 100%;
@@ -283,20 +289,24 @@ body {
     left: 50%;
   }
 }
+
 @media (min-width: 768px) {
   .modal {
     top: 30%;
   }
+
   .planet,
   .facedown {
     height: 8rem;
     max-width: 9rem;
   }
 }
+
 @media (min-width: 1024px) {
   .modal {
     top: 40%;
   }
+
   .planet,
   .facedown {
     max-width: 14rem;

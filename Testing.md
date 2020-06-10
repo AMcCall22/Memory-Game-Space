@@ -90,7 +90,7 @@ Ensure restart button is functioning correctly
 
 Resets the game at any point by clicking i.e all cards to return to 'facedown' position.
 
-Reset both the 'Pairs' and 'Clicks' counter, allowing a new game to start.
+Reset both the 'Pairs' and 'Clicks' counter , allowing a new game to start.
 
 ###### Pass/Fail
 

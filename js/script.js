@@ -26,7 +26,6 @@ function onCardClicked(planet) {
     //Checks logic to determine whether planet is first or second clicked
     //Checks for a match for each planet image, matching on "data-framework"
     //Points to matched or unmatched function
-
     if (firstClick === true) {
         firstCard = target;
         firstCard.classList.add("disabled");
