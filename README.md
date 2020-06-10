@@ -8,12 +8,12 @@ I have chosen to create a memory card came based on the planets of our solar sys
 
 The game is based on a simple memory game of matching 8 pairs of planets images to win.  The game can be played over and over again, providing the player the chance to reduce the number of 'clicks' it takes them to find all 8 pairs.
 
+
 #### **Mock Up images**
 
-![](/README_Images/Mock_Up.png)
+![Readme_images/AMc_MockUp.png]()
 
 #### **UX**
-
 
 
 ##### **User Stories**
