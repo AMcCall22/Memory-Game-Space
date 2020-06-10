@@ -239,10 +239,12 @@ body {
     top: 50%;
     left: 50%;
   }
-  .planet {
-    max-height: 5rem;
+  .planet,
+  .facedown {
+    height: 5rem;
     max-width: 5rem;
   }
+
   .page-title {
     font-size: 2rem;
   }
@@ -268,8 +270,8 @@ body {
 }
 
 @media (max-width: 375px) {
-  .planet {
-    max-height: 4rem;
+  .planet,
+  .facedown {
     max-width: 4rem;
   }
   .modal {
@@ -285,8 +287,9 @@ body {
   .modal {
     top: 30%;
   }
-  .planet {
-    max-height: 8rem;
+  .planet,
+  .facedown {
+    height: 8rem;
     max-width: 9rem;
   }
 }
@@ -294,14 +297,14 @@ body {
   .modal {
     top: 40%;
   }
-  .planet {
-    max-height: 8rem;
+  .planet,
+  .facedown {
     max-width: 14rem;
   }
 }
 
 @media (max-width: 1024px) {
   .planet:hover {
-    border: #ffffff solid 0.2rem;;
+    border: #ffffff solid 0.2rem;
   }
 }

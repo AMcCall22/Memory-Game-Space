@@ -43,7 +43,7 @@ The game is based on a simple memory game of matching 8 pairs of planets images 
 
 
 
-Link to [Wireframes](/Wireframes/Space_Memory_Gamepdf)
+Link to [Wireframes](/Wireframes/Space_Memory_Game.pdf)
 
 
 
