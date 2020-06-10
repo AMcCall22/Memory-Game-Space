@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Balsamiq+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Balsamiq+Sans&display=swap");
 
 /*-------------------------------------------------------------------------body*/
 body {
@@ -6,6 +6,7 @@ body {
   font-family: "Balsamiq Sans", sans-serif;
   background-color: #47ebbe;
 }
+
 /*-------------------------------------------------------------------------header*/
 .page-title {
   font-size: 3.125rem;
@@ -13,7 +14,7 @@ body {
 }
 
 .heading-home {
-  padding: .5rem;
+  padding: 0.5rem;
   text-align: center;
   color: #ffffff;
   justify-content: center;
@@ -68,7 +69,7 @@ body {
 }
 
 .planet {
-  height: 8rem;
+  height: 10rem;
   max-width: 14rem;
   border: #ffffff solid 0.2rem;
   border-radius: 0.625rem;
@@ -77,9 +78,7 @@ body {
   background-repeat: no-repeat;
   cursor: pointer;
   margin: 0.2rem;
-
-
-
+  background-color: #000000;
 }
 
 .disabled {
@@ -95,36 +94,36 @@ body {
 }
 /*-------------------------------------------------------------------------planets*/
 .earth {
-background: #000000 url("../images/planets/earth.jpg");
+  background-image: url("../images/planets/earth.jpg");
 }
 
 .jupiter {
-  background: 	#000000 url("../images/planets/jupiter.png");
+  background-image: url("../images/planets/jupiter.png");
 }
 
 .mars {
-  background: 	#000000 url("../images/planets/mars.jpg");
+  background-image: url("../images/planets/mars.jpg");
+  max-height: 50%;
 }
 
 .mercury {
-  background:	#000000 url("../images/planets/mercury.jpg");
+  background-image: url("../images/planets/mercury.jpg");
 }
 
 .neptune {
-  background:	#000000 url("../images/planets/neptune.jpg");
+  background-image: url("../images/planets/neptune.jpg");
 }
 
 .saturn {
-  background:	#000000 url("../images/planets/saturn.jpg");
-
+  background-image: url("../images/planets/saturn.jpg");
 }
 
 .uranus {
-  background:	#000000 url("../images/planets/uranus.jpg");
+  background-image: url("../images/planets/uranus.jpg");
 }
 
 .venus {
-  background:	#000000 url("../images/planets/venus.jpg");
+  background-image: url("../images/planets/venus.jpg");
 }
 
 /*-------------------------------------------------------------------------facedown/matches*/
@@ -132,7 +131,7 @@ background: #000000 url("../images/planets/earth.jpg");
   background-image: url("../images/planets/rocket.png");
   background-size: contain;
   background-color: #ebbe47;
-  height: 8rem;
+  height: 10rem;
   max-width: 14rem;
   border: #ffffff solid 0.2rem;
   border-radius: 0.625rem;
@@ -205,6 +204,10 @@ background: #000000 url("../images/planets/earth.jpg");
 .modalshow {
   display: block;
 }
+
+.small-planet {
+  display: none;
+}
 /*-------------------------------------------------------------------------modal close buttons*/
 .close-button-start,
 .close-button-end {
@@ -237,7 +240,7 @@ background: #000000 url("../images/planets/earth.jpg");
     left: 50%;
   }
   .planet {
-    height: 5rem;
+    max-height: 5rem;
     max-width: 5rem;
   }
   .page-title {
@@ -247,18 +250,26 @@ background: #000000 url("../images/planets/earth.jpg");
     font-size: 1.5rem;
   }
   .counter {
-    font-size: 1.15rem;
-  }
-  .counter,
-  .restart {
+    font-size: 1rem;
+    height: 2rem;
     max-width: 5.5rem;
-    max-height: 4rem;
+  }
+
+  .restart {
+    max-width: 4.5rem;
+    height: 3rem;
+    font-size: 0.25rem;
+  }
+
+  #restartButton {
+    color: #ffffff;
+    font-size: 1.25rem;
   }
 }
 
 @media (max-width: 375px) {
   .planet {
-    height: 4rem;
+    max-height: 4rem;
     max-width: 4rem;
   }
   .modal {
@@ -270,13 +281,12 @@ background: #000000 url("../images/planets/earth.jpg");
     left: 50%;
   }
 }
-
 @media (min-width: 768px) {
   .modal {
     top: 30%;
   }
   .planet {
-    height: 8rem;
+    max-height: 8rem;
     max-width: 9rem;
   }
 }
@@ -285,13 +295,13 @@ background: #000000 url("../images/planets/earth.jpg");
     top: 40%;
   }
   .planet {
-    height: 8rem;
+    max-height: 8rem;
     max-width: 14rem;
   }
 }
 
 @media (max-width: 1024px) {
   .planet:hover {
-    border: #ffffff solid 0.2rem;
+    border: #ffffff solid;
   }
 }

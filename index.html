@@ -46,6 +46,18 @@
           <i class="fas fa-rocket"></i> Enjoy!
           <i class="fas fa-rocket" aria-hidden="true"></i>
         </p>
+
+<!-- Small Planet divs added to pre-load images before game starts -->
+        <div class="row no-gutters">
+          <div class="col-3 small-planet jupiter"></div>
+          <div class="col-3 small-planet saturn"></div>
+          <div class="col-3 small-planet neptune"></div>
+          <div class="col-3 small-planet uranus"></div>
+          <div class="col-3 small-planet mars"></div>
+          <div class="col-3 small-planet earth"></div>
+          <div class="col-3 small-planet venus"></div>
+          <div class="col-3 small-planet mercury"></div>
+        </div>
       </div>
     </div>
 
@@ -90,7 +102,8 @@
         </audio>
         <div
           class="row no-gutters justify-content-center disabled"
-          id="gameSpace">
+          id="gameSpace"
+        >
           <div
             class="col-3 jupiter planet facedown"
             data-framework="jupiter-card"
@@ -135,6 +148,7 @@
             class="col-3 mercury planet facedown"
             data-framework="mercury-card "
             onmousedown="onCardClicked(event)"
+            id="preload-08"
           ></div>
           <div
             class="col-3 mercury planet facedown"
@@ -180,7 +194,9 @@
           <source src="assets/sounds/bing.wav" />
         </audio>
         <div class="modal-content-end">
-          <button class="close-button-end" id="end-close-button">&times;</button>
+          <button class="close-button-end" id="end-close-button">
+            &times;
+          </button>
           <h2>Well done!</h2>
           <h3>You have completed the memory game!</h3>
           <p>
@@ -209,6 +225,5 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-
   </body>
 </html>
