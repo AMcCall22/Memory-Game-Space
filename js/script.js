@@ -5,17 +5,16 @@ let clickCount = 0;
 
 //OnCardClicked Function
 //Add audio when planet is clicked
-//Replaces the facedown(rocket)image with the planet image
+//Replace the facedown(rocket)image with the planet image
 //Onmousedown ="onCardClicked(event)" added to each planet div in index.html
-//Checks whether planet is first or second clicked
-//Stores first planet or checks matching logic for second planet
-
+//Check whether planet is first or second clicked
+//Store first planet or check matching logic for second planet
 
 function onCardClicked(planet) {
-const mySound = document.getElementById("sound");
-mySound.currentTime = 0;
-document.querySelector("planet");
-mySound.play();
+  const mySound = document.getElementById("sound");
+  mySound.currentTime = 0;
+  document.querySelector("planet");
+  mySound.play();
   let target = planet.currentTarget;
   target.className = target.className.replace("facedown", "");
 

@@ -1,114 +1,162 @@
-**## Testing**
+## Testing
 
-Testing can be found in this file - LINK
-
-
-
-**#### \**Functionality\****
+### Functionality
 
 
 
-**##### \**Browser compatibility\****
+1. #### Start-game modal
+
+2. ###### Test Description 
+
+3. Ensure correct loading of modal and correct game initiation.
+
+4. ###### Expected Outcome 
+
+5. Modal appears on loading the webpage of the game.  Once the 'close' button is clicked, the game begins.
+
+6. ###### Pass/Fail
+
+7. Pass
+
+8. 
+
+9. #### Gamespace
+
+10. ###### Test Description 
+
+11. Ensure Gamespace loads correctly for game to be played.
+
+12. ###### Expected Outcome 
+
+13. The starting position of the cards is a facedown image. 
+
+14. On each card click, a short audio sound plays and the image of the planet is revealed.  
+
+15. Matching logic is called and if the images match, a blue starry background is revealed to demonstrate this.
+
+16. Only 2 cards can be clicked before matching checks are made.
+
+17. If the images do not match, the facedown images reappears on the cards.
+
+18. ###### Pass/Fail 
+
+19. Pass
+
+20. 
+
+21. #### Pairs counter
+
+22. ###### Test Description 
+
+23. Ensure correct counting of card matches made.
+
+24. ###### Expected Outcome 
+
+25. Correctly record the number of pairs matched, up to a maximum of 8.
+
+26. Counter resets once the restart button has been clicked or the 'end modal' appears on screen.
+
+27. ###### Pass/Fail
+
+28. Pass
+
+29. 
+
+30. #### Clicks counter
+
+31. ###### Test Description 
+
+32. Ensure correct counting of clicks made.
+
+33. ###### Expected Outcome 
+
+34. Correctly record the number of card clicks made throughout the game.
+
+35. Counter resets once the restart button has been clicked or the 'end modal' appears on screen.
+
+36. ###### Pass/Fail
+
+37. Pass
+
+38. 
+
+39. #### Restart button
+
+40. ###### Test Description 
+
+41. Ensure restart button is functioning correctly
+
+42. ###### Expected Outcome 
+
+43. Resets the game at any point by clicking i.e all cards to return to 'facedown' position.
+
+44. Reset both the 'Pairs' and 'Clicks' counter , allowing a new game to start.
+
+45. ###### Pass/Fail
+
+46. Pass
+
+47. 
+
+48. #### End-game modal
+
+49. ###### Test Description 
+
+50. Ensure correct loading of modal and correct game completion.
+
+51. ###### Expected Outcome 
+
+52. Modal triggers once 8 matches have been found.
+
+53. Audio plays on modal trigger.
+
+54. Once the 'close' button has been clicked, the reset logic (as per the restart button) is called. The game and counters are reset. 
+
+55. ###### Pass/Fail
+
+56. Pass
+
+57. 
+
+### Browser compatibility
+
+- 
+
+Ensure that the site loads correctly on each of the following web browsers
+
+- Chrome - Passed
+- Edge - Passed
+- Firefox - Passed
+- Safari - Passed
 
 
 
-Test description and desired outcome -
+#### Code Validation
+
+The code has been passed through the following validation tools:
+
+\- [W3C Markup Validation](https://validator.w3.org/)  - Document checking completed. No errors or warnings to show
+
+\- [W3C CSS validation](https://jigsaw.w3.org/css-validator/)  - No errors found. The following 5 warnings were raised but these do not affect the functionality of the game.
+
+![image-20200610105410902](C:\Users\aliso\AppData\Roaming\Typora\typora-user-images\image-20200610105410902.png)
 
 
 
- **Ensure that the site loads correctly on each of the following web browsers:**
-
-
-
-\- **Chrome - Passed**
-
-\- **Edge - Passed**
-
-\- **Firefox - Passed**
-
-\- **Safari - Passed**
-
-
-
-**##### Code Validation**
-
-
-
-\- [W3C Markup Validation](https://validator.w3.org/) 
-
-\- [W3C CSS validation](https://jigsaw.w3.org/css-validator/) 
-
-Links and Buttons have also all been tested and work correctly.
-
-
-
-**#### \**Reach (responsiveness)\****
-
-
-
-Test description and desired outcome -
-
-
+#### Responsiveness
 
 Ensure that the site is responsive and loads correctly on each screen size using the chrome developer tools:
 
-
-
-\- **Small devices - Passed**
-
-\- **Medium devices - Passed**
-
-\- **Large devices - Passed**
-
-\- **x-Large devices - Passed**
+- Small devices - Passed
+- Medium devices - Passed
+- Large devices - Passed
+- x-Large devices - Passed
 
 
 
-**#### \**Features\****
+#### Further testing
 
-***\* A start-game modal \****
+Chrome developer tools was used throughout the entirety of the project.
 
-- The start modal appears on loading the webpage of the game.
+Family and friends have also tested the game for user experience and to aid mobile responsiveness testing.
 
-- It provides instructions as to how to play the game.
-
-- Once the 'close' button is clicked, the game can begin.
-
-  
-
-***\* The 'Gamespace' with 16 cards \****
-
-- There are 8 planets in the solar system which provide the images for the 16 cards available for play.
-- The starting position of the cards is a facedown image (yellow with a rocket).  
-- Once a card is clicked, a short audio sound plays and the image of the planet is revealed.
-- Once a second card is clicked, the audio is played and the image is revealed.  
-- Matching logic is called and if the images match, a blue starry background is revealed to demonstrate this.
-- If the images do not match, the facedown images reappears on the cards.
-
-
-
-***\*A 'Pairs' counter\****
-
-- This counter records the number of pairs matched, up to a maximum of 8.
-- This resets once the restart button has been clicked or the 'end modal' appears on screen.
-
-
-
-***\*A 'Clicks' counter\****
-
-- This counter records the number clicks that have taken place on the cards throughout the game.  It introduces an element of competitiveness as the player can try to 'beat' the number of clicks that it takes them to find all 8 matches.
-- This resets once the restart button has been clicked or the 'End Modal' appears on screen.
-
-
-
-***\* A restart button\****
-
-- This button resets the game at any point, resetting both the 'Pairs' and 'Clicks' counter , allowing a new game to start.****
-
-
-
-***\* An end-game modal \****
-
-- The 'end modal' appears once 8 matches have been found and signifies the end of the game.
-- The modal provides a congratulatory message with instructions as to how to play again.
-- Once the 'close' button has been clicked, the reset logic (as per the restart button) is called. The game and counters are reset. 

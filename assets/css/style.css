@@ -302,6 +302,6 @@ body {
 
 @media (max-width: 1024px) {
   .planet:hover {
-    border: #ffffff solid;
+    border: #ffffff solid 0.2rem;;
   }
 }
