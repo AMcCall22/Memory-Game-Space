@@ -139,7 +139,7 @@ The code has been passed through the following validation tools:
 
 \- [W3C CSS validation](https://jigsaw.w3.org/css-validator/)  - No errors found. The following 5 warnings were raised but these do not affect the functionality of the game.
 
-![image-20200610105410902](C:\Users\aliso\AppData\Roaming\Typora\typora-user-images\image-20200610105410902.png)
+![](README_Images/css_validator_warnings.png)
 
 
 
