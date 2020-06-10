@@ -90,7 +90,7 @@ The game is played on 1 screen which includes the following features:
 
 ##### A restart button
 
-- This button resets the game at any point, resetting both the 'Pairs' and 'Clicks' counter , allowing a new game to start.****
+- This button resets the game at any point, resetting both the 'Pairs' and 'Clicks' counter , allowing a new game to start.
 
 
 
@@ -137,8 +137,9 @@ The game is played on 1 screen which includes the following features:
 **Issues faced and resolved**
 
 - There was a dealy on the audio sound on clicking the planets.  This was resolved....
-- Media queries were added in to compensate for any issues faced on mobile view.  These mainly include dthe planet div height max-widht, as well as the modal sizes.
+- Media queries were added in to compensate for any issues faced on mobile view.  These mainly include the planet div height max-width, as well as the modal sizes.
 - The hover class added to the planet div became 'sticky' on mobile screens.  To compensate, a media query with a white border was added  which resolved the issue
+- The background image with background colour on mobile view was delayed on loading.  This proved complex to resolve, and the end result is the loading of the images within the start modal without being displayed. This acts as a 'preload' and has resolved the issue.
 
 
 
@@ -148,11 +149,7 @@ The game is played on 1 screen which includes the following features:
 
 The GitHub repository for this site is located [here](https://github.com/AMcCall22/Memory-Game-Space).
 
-
-
 In order to deploy my site to GitHub Pages the following steps were taken:
-
-
 
 1. From the menu items near the top of the page, select ***\*Settings\****.
 
@@ -166,19 +163,15 @@ In order to deploy my site to GitHub Pages the following steps were taken:
 
 
 
-Deployed website - 
-
-
+Deployed website - https://amccall22.github.io/Memory-Game-Space
 
 To ***\*clone\**** this project from Github, please follow the steps below:
-
-
 
 1. Navigate to the correct repository - [here](https://github.com/AMcCall22/Memory-Game-Space).
 
 2. Click the green button - 'Clone or Download'.
 
-3. Copy the clone URL that appears https://amccall22.github.io/Memory-Game-Space/.
+3. Copy the clone URL that appears - https://amccall22.github.io/Memory-Game-Space
 
 4. Change the current working directory to the location where you want the cloned directory to be made.
 
@@ -190,13 +183,11 @@ To ***\*clone\**** this project from Github, please follow the steps below:
 
 
 
-**Credits**
+### Credits
 
+#### **Content**
 
-
-**Content**
-
-Memory Game coding inspiration
+##### Memory Game coding inspiration
 
 https://www.youtube.com/watch?v=bbb9dZotsOc
 
@@ -206,7 +197,7 @@ https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
 
 https://codeburst.io/how-to-make-a-dragon-ball-memory-game-part-2-5659ff2ee0b9
 
-**General**
+##### **General**
 
 https://www.w3schools.com/
 
@@ -214,7 +205,7 @@ https://css-tricks.com/considerations-styling-modal/
 
 
 
-**Media**
+#### **Media**
 
 **Images**
 
@@ -235,7 +226,7 @@ https://css-tricks.com/considerations-styling-modal/
 
 
 
-Thanks to my Mentor Brian Macharia for his input and direction.
+Thanks to my mentor, Brian Macharia for his input and direction.
 
 
 
