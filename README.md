@@ -11,7 +11,7 @@ The game is based on a simple memory game of matching 8 pairs of planets images 
 
 #### **Mock Up images**
 
-![Readme_images/AMc_MockUp.png]()
+![README_Images/Mock_Up.PNG]()
 
 #### **UX**
 
